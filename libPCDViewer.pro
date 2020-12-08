@@ -24,12 +24,18 @@ QT       += widgets opengl xml
 TARGET = libPCDViewer
 TEMPLATE = lib
 
-DESTDIR_RELEASE=C:\dev\release
-DESTDIR_DEBUG=C:\dev\debug
+DESTDIR_RELEASE= ./../../../build/release
+DESTDIR_DEBUG= ./../../../build/debug
 #OSGEO4W_PATH="C:\Program Files\QGIS 2.18"
-OSGEO4W_PATH="C:\Program Files\QGIS 3.4"
-LASTOOLS_PATH = E:\Qt5CreatorPrograms\TIDOP_TOOLS_USAL\libs\LASTools2019
-PCDVIEWER_MCVC_PATH="..\PcdViewer_V1.4_src"
+OSGEO4W_PATH="C:\Program Files\QGIS 3.10"
+LASTOOLS_PATH = ./../../../depends/LASTools2019
+PCDVIEWER_MCVC_PATH=./../../../depends/pcdviewer/PcdViewer_V1.4_src
+#BOOS_DIR ="E:\Librerias\boost_1_68_0_vs2014_x64"
+BOOST_PATH= ./../../../depends/boost_1_68_0_vs2014_x64
+#CGAL_DIR ="E:\Librerias\CGAL-14.3_vs2014_x64"
+#CGAL_PATH= ./../../../depends/CGAL-5.0-beta1
+CGAL_PATH= ./../../../depends/CGAL-14.3_vs2014_x64
+EIGEN_PATH= ./../../../depends/eigen-eigen-323c052e1731
 
 INCLUDEPATH += . $$OSGEO4W_PATH/include
 INCLUDEPATH += $$LASTOOLS_PATH\LASlib\inc
@@ -41,8 +47,9 @@ INCLUDEPATH += ../../libs/libIGDAL
 INCLUDEPATH += ../../libs/libPointCloudDbManager
 INCLUDEPATH += ../../libs/libModelManagementTools
 INCLUDEPATH += ../../libs/libWidgets
-INCLUDEPATH += ../PcdViewer_V1.4_src
-INCLUDEPATH += ../PcdViewer_V1.4_src/pcdviewer
+INCLUDEPATH += $$PCDVIEWER_MCVC_PATH
+INCLUDEPATH += $$PCDVIEWER_MCVC_PATH/pcdviewer
+INCLUDEPATH += $$EIGEN_PATH
 
 INCLUDEPATH += .
 INCLUDEPATH += $$PCDVIEWER_MCVC_PATH/basic
@@ -51,34 +58,34 @@ INCLUDEPATH += $$PCDVIEWER_MCVC_PATH/math
 INCLUDEPATH += $$PCDVIEWER_MCVC_PATH/QGLViewer
 INCLUDEPATH += $$PCDVIEWER_MCVC_PATH/widget
 
-CGAL_DIR ="E:\Librerias\CGAL-14.3_vs2014_x64"
-INCLUDEPATH += $$CGAL_DIR/include
+#INCLUDEPATH += $$CGAL_DIR/include
+INCLUDEPATH += $$CGAL_PATH/include
 
-BOOS_DIR ="E:\Librerias\boost_1_68_0_vs2014_x64"
-INCLUDEPATH += $$BOOS_DIR
+#INCLUDEPATH += $$BOOS_DIR
+INCLUDEPATH += $$BOOST_PATH
 
 DEFINES += LIBPCDVIEWER_LIBRARY
 
 SOURCES += \
     PCDViewerMainWindow.cpp \
-    ../PcdViewer_V1.4_src/PcdViewer/select_tool.cpp \
-    ../PcdViewer_V1.4_src/PcdViewer/select_vertex_lasso_tool.cpp \
-    ../PcdViewer_V1.4_src/PcdViewer/select_vertex_rectangle_tool.cpp \
-    ../PcdViewer_V1.4_src/PcdViewer/tool_manager3d.cpp \
-    ../PcdViewer_V1.4_src/PcdViewer/tool3D.cpp \
+    $$PCDVIEWER_MCVC_PATH/PcdViewer/select_tool.cpp \
+    $$PCDVIEWER_MCVC_PATH/PcdViewer/select_vertex_lasso_tool.cpp \
+    $$PCDVIEWER_MCVC_PATH/PcdViewer/select_vertex_rectangle_tool.cpp \
+    $$PCDVIEWER_MCVC_PATH/PcdViewer/tool_manager3d.cpp \
+    $$PCDVIEWER_MCVC_PATH/PcdViewer/tool3D.cpp \
     PCDViewerManager.cpp \
     paint_canvas.cpp
 
 HEADERS += \
     libPCDViewer_global.h \
     PCDViewerMainWindow.h \
-    ../PcdViewer_V1.4_src/PcdViewer/select_tool.h \
-    ../PcdViewer_V1.4_src/PcdViewer/select_vertex_lasso_tool.h \
-    ../PcdViewer_V1.4_src/PcdViewer/select_vertex_rectangle_tool.h \
-    ../PcdViewer_V1.4_src/PcdViewer/tool_manager3d.h \
-    ../PcdViewer_V1.4_src/PcdViewer/tool_name.h \
-    ../PcdViewer_V1.4_src/PcdViewer/tool3D.h \
-    ../PcdViewer_V1.4_src/PcdViewer/tree_widge_titem.h \
+    $$PCDVIEWER_MCVC_PATH/PcdViewer/select_tool.h \
+    $$PCDVIEWER_MCVC_PATH/PcdViewer/select_vertex_lasso_tool.h \
+    $$PCDVIEWER_MCVC_PATH/PcdViewer/select_vertex_rectangle_tool.h \
+    $$PCDVIEWER_MCVC_PATH/PcdViewer/tool_manager3d.h \
+    $$PCDVIEWER_MCVC_PATH/PcdViewer/tool_name.h \
+    $$PCDVIEWER_MCVC_PATH/PcdViewer/tool3D.h \
+    $$PCDVIEWER_MCVC_PATH/PcdViewer/tree_widge_titem.h \
     PCDViewerManager.h \
     paint_canvas.h
 
@@ -88,11 +95,24 @@ debug{
     LIBS += -L$$DESTDIR_DEBUG
     LIBS += -L$$LASTOOLS_PATH/lib64D
     LIBS += -llaslib
+    LIBS += $$CGAL_PATH/lib/CGAL-vc140-mt-gd-4.13.lib
+    LIBS += $$CGAL_PATH/lib/CGAL-vc140-mt-4.13.lib
+    LIBS += $$PCDVIEWER_MCVC_PATH/x64/Debug/basic.lib
+    LIBS += $$PCDVIEWER_MCVC_PATH/x64/Debug/geometry.lib
+    LIBS += $$PCDVIEWER_MCVC_PATH/x64/Debug/math.lib
+    LIBS += $$PCDVIEWER_MCVC_PATH/x64/Debug/qglviewer.lib
+    LIBS += $$PCDVIEWER_MCVC_PATH/x64/Debug/widget.lib
 }else{
     DESTDIR = $$DESTDIR_RELEASE
     LIBS += -L$$DESTDIR_RELEASE
     LIBS += -L$$LASTOOLS_PATH/lib64
     LIBS += -llaslib
+    LIBS += $$CGAL_PATH/lib/CGAL-vc140-mt-4.13.lib
+    LIBS += $$PCDVIEWER_MCVC_PATH/x64/Release/basic.lib
+    LIBS += $$PCDVIEWER_MCVC_PATH/x64/Release/geometry.lib
+    LIBS += $$PCDVIEWER_MCVC_PATH/x64/Release/math.lib
+    LIBS += $$PCDVIEWER_MCVC_PATH/x64/Release/qglviewer.lib
+    LIBS += $$PCDVIEWER_MCVC_PATH/x64/Release/widget.lib
 }
 
 LIBS += -llibPointCloudDbManager
@@ -109,11 +129,11 @@ LIBS += $$OSGEO4W_PATH\lib\proj_i.lib
 LIBS += $$OSGEO4W_PATH\lib\gdal_i.lib
 LIBS += $$OSGEO4W_PATH\lib\libtiff_i.lib
 
-LIBS += -lbasic
-LIBS += -lgeometry
-LIBS += -lmath
-LIBS += -lqglviewer
-LIBS += -lwidget
+#LIBS += -lbasic
+#LIBS += -lgeometry
+#LIBS += -lmath
+#LIBS += -lqglviewer
+#LIBS += -lwidget
 LIBS += -lopengl32#.lib
 LIBS += -lglu32#.lib
 
