@@ -1,0 +1,27 @@
+<RCC>
+    <qresource prefix="/Resources">
+        <file>axis.png</file>
+        <file>deleted_selected.png</file>
+        <file>exit.png</file>
+        <file>fileopen.png</file>
+        <file>filesave.png</file>
+        <file>fullscreen.png</file>
+        <file>hand.bmp</file>
+        <file>home.png</file>
+        <file>icon.ico</file>
+        <file>icon.png</file>
+        <file>lasso.png</file>
+        <file>minus.png</file>
+        <file>perspective.png</file>
+        <file>plus.png</file>
+        <file>scene_manipulation.png</file>
+        <file>select_points.png</file>
+        <file>snap_shot.png</file>
+        <file>color_by_height.png</file>
+        <file>rotate.png</file>
+        <file>normal.png</file>
+        <file>mActionSelectRectangle.png</file>
+        <file>mActionSelectPolygon.png</file>
+        <file>mActionSelectFreehand.png</file>
+    </qresource>
+</RCC>
