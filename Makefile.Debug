@@ -14,10 +14,10 @@ CXX           = cl
 DEFINES       = -DUNICODE -DWIN32 -DWIN64 -DLIBPCDVIEWER_LIBRARY -DQT_QML_DEBUG -DQT_OPENGL_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_XML_LIB -DQT_CORE_LIB -D_WINDLL
 CFLAGS        = -nologo -Zc:wchar_t -FS -Zc:strictStrings -Zi -MDd -W3 -w44456 -w44457 -w44458 /Fddebug\libPCDViewer.vc.pdb $(DEFINES)
 CXXFLAGS      = -nologo -Zc:wchar_t -FS -Zc:strictStrings -Zc:throwingNew -Zi -MDd -GR -W3 -w34100 -w34189 -w44996 -w44456 -w44457 -w44458 -wd4577 -wd4467 -EHsc /Fddebug\libPCDViewer.vc.pdb $(DEFINES)
-INCPATH       = -I. -I. -I"C:\Program Files\QGIS 3.10\include" -I..\..\..\depends\LASTools2019\LASlib\inc -I..\..\..\depends\LASTools2019\LASzip\src -I..\..\libs\libCRS -I..\..\libs\libParameters -I..\..\libs -I..\..\libs\libIGDAL -I..\..\libs\libPointCloudDbManager -I..\..\libs\libModelManagementTools -I..\..\libs\libWidgets -I..\..\..\depends\pcdviewer\PcdViewer_V1.4_src -I..\..\..\depends\pcdviewer\PcdViewer_V1.4_src\pcdviewer -I..\..\..\depends\eigen-eigen-323c052e1731 -I. -I..\..\..\depends\pcdviewer\PcdViewer_V1.4_src\basic -I..\..\..\depends\pcdviewer\PcdViewer_V1.4_src\geometry -I..\..\..\depends\pcdviewer\PcdViewer_V1.4_src\math -I..\..\..\depends\pcdviewer\PcdViewer_V1.4_src\QGLViewer -I..\..\..\depends\pcdviewer\PcdViewer_V1.4_src\widget -I..\..\..\depends\CGAL-14.3_vs2014_x64\include -I..\..\..\depends\boost_1_68_0_vs2014_x64 -IC:\Qt\Qt5.6.3\5.6.3\msvc2015_64\include -IC:\Qt\Qt5.6.3\5.6.3\msvc2015_64\include\QtOpenGL -IC:\Qt\Qt5.6.3\5.6.3\msvc2015_64\include\QtWidgets -IC:\Qt\Qt5.6.3\5.6.3\msvc2015_64\include\QtGui -IC:\Qt\Qt5.6.3\5.6.3\msvc2015_64\include\QtANGLE -IC:\Qt\Qt5.6.3\5.6.3\msvc2015_64\include\QtXml -IC:\Qt\Qt5.6.3\5.6.3\msvc2015_64\include\QtCore -Idebug -I. -IC:\Qt\Qt5.6.3\5.6.3\msvc2015_64\mkspecs\win32-msvc2015 
+INCPATH       = -I. -I. -I"C:\Program Files\QGIS 3.4\include" -I..\..\..\depends\LASTools2019\LASlib\inc -I..\..\..\depends\LASTools2019\LASzip\src -I..\..\libs\libCRS -I..\..\libs\libParameters -I..\..\libs -I..\..\libs\libIGDAL -I..\..\libs\libPointCloudDbManager -I..\..\libs\libModelManagementTools -I..\..\libs\libWidgets -I..\..\..\depends\pcdviewer\PcdViewer_V1.4_src -I..\..\..\depends\pcdviewer\PcdViewer_V1.4_src\pcdviewer -I..\..\..\depends\eigen-eigen-323c052e1731 -I. -I..\..\..\depends\pcdviewer\PcdViewer_V1.4_src\basic -I..\..\..\depends\pcdviewer\PcdViewer_V1.4_src\geometry -I..\..\..\depends\pcdviewer\PcdViewer_V1.4_src\math -I..\..\..\depends\pcdviewer\PcdViewer_V1.4_src\QGLViewer -I..\..\..\depends\pcdviewer\PcdViewer_V1.4_src\widget -I..\..\..\depends\CGAL-14.3_vs2014_x64\include -I..\..\..\depends\boost_1_68_0_vs2014_x64 -IC:\Qt\Qt5.6.3\5.6.3\msvc2015_64\include -IC:\Qt\Qt5.6.3\5.6.3\msvc2015_64\include\QtOpenGL -IC:\Qt\Qt5.6.3\5.6.3\msvc2015_64\include\QtWidgets -IC:\Qt\Qt5.6.3\5.6.3\msvc2015_64\include\QtGui -IC:\Qt\Qt5.6.3\5.6.3\msvc2015_64\include\QtANGLE -IC:\Qt\Qt5.6.3\5.6.3\msvc2015_64\include\QtXml -IC:\Qt\Qt5.6.3\5.6.3\msvc2015_64\include\QtCore -Idebug -I. -IC:\Qt\Qt5.6.3\5.6.3\msvc2015_64\mkspecs\win32-msvc2015 
 LINKER        = link
 LFLAGS        = /NOLOGO /DYNAMICBASE /NXCOMPAT /DEBUG /DLL /SUBSYSTEM:WINDOWS
-LIBS          = /LIBPATH:..\..\..\build\debug /LIBPATH:..\..\..\depends\LASTools2019\lib64D ..\..\..\depends\LASTools2019\lib64D\laslib.lib ..\..\..\depends\CGAL-14.3_vs2014_x64\lib\CGAL-vc140-mt-gd-4.13.lib ..\..\..\depends\CGAL-14.3_vs2014_x64\lib\CGAL-vc140-mt-4.13.lib ..\..\..\depends\pcdviewer\PcdViewer_V1.4_src\x64\Debug\basic.lib ..\..\..\depends\pcdviewer\PcdViewer_V1.4_src\x64\Debug\geometry.lib ..\..\..\depends\pcdviewer\PcdViewer_V1.4_src\x64\Debug\math.lib ..\..\..\depends\pcdviewer\PcdViewer_V1.4_src\x64\Debug\qglviewer.lib ..\..\..\depends\pcdviewer\PcdViewer_V1.4_src\x64\Debug\widget.lib ..\..\..\build\debug\libPointCloudDbManager.lib ..\..\..\build\debug\libModelManagementTools.lib ..\..\..\build\debug\libWidgets.lib /LIBPATH:"C:\Program Files\QGIS 3.10\bin" "C:\Program Files\QGIS 3.10\lib\geos_c.lib" "C:\Program Files\QGIS 3.10\lib\proj_i.lib" "C:\Program Files\QGIS 3.10\lib\gdal_i.lib" "C:\Program Files\QGIS 3.10\lib\libtiff_i.lib" opengl32.lib glu32.lib /LIBPATH:C:\Qt\Qt5.6.3\5.6.3\msvc2015_64\lib C:\Qt\Qt5.6.3\5.6.3\msvc2015_64\lib\Qt5OpenGLd.lib C:\Qt\Qt5.6.3\5.6.3\msvc2015_64\lib\Qt5Widgetsd.lib C:\Qt\Qt5.6.3\5.6.3\msvc2015_64\lib\Qt5Guid.lib C:\Qt\Qt5.6.3\5.6.3\msvc2015_64\lib\Qt5Xmld.lib C:\Qt\Qt5.6.3\5.6.3\msvc2015_64\lib\Qt5Cored.lib 
+LIBS          = /LIBPATH:..\..\..\build\debug /LIBPATH:..\..\..\depends\LASTools2019\lib64D ..\..\..\depends\LASTools2019\lib64D\laslib.lib ..\..\..\depends\CGAL-14.3_vs2014_x64\lib\CGAL-vc140-mt-gd-4.13.lib ..\..\..\depends\CGAL-14.3_vs2014_x64\lib\CGAL-vc140-mt-4.13.lib ..\..\..\depends\pcdviewer\PcdViewer_V1.4_src\x64\Debug\basic.lib ..\..\..\depends\pcdviewer\PcdViewer_V1.4_src\x64\Debug\geometry.lib ..\..\..\depends\pcdviewer\PcdViewer_V1.4_src\x64\Debug\math.lib ..\..\..\depends\pcdviewer\PcdViewer_V1.4_src\x64\Debug\qglviewer.lib ..\..\..\depends\pcdviewer\PcdViewer_V1.4_src\x64\Debug\widget.lib ..\..\..\build\debug\libPointCloudDbManager.lib ..\..\..\build\debug\libModelManagementTools.lib ..\..\..\build\debug\libWidgets.lib /LIBPATH:"C:\Program Files\QGIS 3.4\bin" "C:\Program Files\QGIS 3.4\lib\geos_c.lib" "C:\Program Files\QGIS 3.4\lib\proj_i.lib" "C:\Program Files\QGIS 3.4\lib\gdal_i.lib" "C:\Program Files\QGIS 3.4\lib\libtiff_i.lib" opengl32.lib glu32.lib /LIBPATH:C:\Qt\Qt5.6.3\5.6.3\msvc2015_64\lib C:\Qt\Qt5.6.3\5.6.3\msvc2015_64\lib\Qt5OpenGLd.lib C:\Qt\Qt5.6.3\5.6.3\msvc2015_64\lib\Qt5Widgetsd.lib C:\Qt\Qt5.6.3\5.6.3\msvc2015_64\lib\Qt5Guid.lib C:\Qt\Qt5.6.3\5.6.3\msvc2015_64\lib\Qt5Xmld.lib C:\Qt\Qt5.6.3\5.6.3\msvc2015_64\lib\Qt5Cored.lib 
 QMAKE         = C:\Qt\Qt5.6.3\5.6.3\msvc2015_64\bin\qmake.exe
 IDC           = idc
 IDL           = midl
@@ -1974,7 +1974,7 @@ debug\moc_PCDViewerMainWindow.cpp: C:\Qt\Qt5.6.3\5.6.3\msvc2015_64\include\QtWid
 		C:\Qt\Qt5.6.3\5.6.3\msvc2015_64\include\QtCore\qitemselectionmodel.h \
 		..\libWidgets\libwidgets_global.h \
 		PCDViewerMainWindow.h
-	C:\Qt\Qt5.6.3\5.6.3\msvc2015_64\bin\moc.exe $(DEFINES) -D_MSC_VER=1900 -D_WIN32 -D_WIN64 -IC:/Qt/Qt5.6.3/5.6.3/msvc2015_64/mkspecs/win32-msvc2015 -IE:/dev/src/libs/libPCDViewer -IE:/dev/src/libs/libPCDViewer -I"C:/Program Files/QGIS 3.10/include" -IE:/dev/depends/LASTools2019/LASlib/inc -IE:/dev/depends/LASTools2019/LASzip/src -IE:/dev/src/libs/libCRS -IE:/dev/src/libs/libParameters -IE:/dev/src/libs -IE:/dev/src/libs/libIGDAL -IE:/dev/src/libs/libPointCloudDbManager -IE:/dev/src/libs/libModelManagementTools -IE:/dev/src/libs/libWidgets -IE:/dev/depends/pcdviewer/PcdViewer_V1.4_src -IE:/dev/depends/pcdviewer/PcdViewer_V1.4_src/pcdviewer -IE:/dev/depends/eigen-eigen-323c052e1731 -IE:/dev/src/libs/libPCDViewer -IE:/dev/depends/pcdviewer/PcdViewer_V1.4_src/basic -IE:/dev/depends/pcdviewer/PcdViewer_V1.4_src/geometry -IE:/dev/depends/pcdviewer/PcdViewer_V1.4_src/math -IE:/dev/depends/pcdviewer/PcdViewer_V1.4_src/QGLViewer -IE:/dev/depends/pcdviewer/PcdViewer_V1.4_src/widget -IE:/dev/depends/CGAL-14.3_vs2014_x64/include -IE:/dev/depends/boost_1_68_0_vs2014_x64 -IC:/Qt/Qt5.6.3/5.6.3/msvc2015_64/include -IC:/Qt/Qt5.6.3/5.6.3/msvc2015_64/include/QtOpenGL -IC:/Qt/Qt5.6.3/5.6.3/msvc2015_64/include/QtWidgets -IC:/Qt/Qt5.6.3/5.6.3/msvc2015_64/include/QtGui -IC:/Qt/Qt5.6.3/5.6.3/msvc2015_64/include/QtANGLE -IC:/Qt/Qt5.6.3/5.6.3/msvc2015_64/include/QtXml -IC:/Qt/Qt5.6.3/5.6.3/msvc2015_64/include/QtCore PCDViewerMainWindow.h -o debug\moc_PCDViewerMainWindow.cpp
+	C:\Qt\Qt5.6.3\5.6.3\msvc2015_64\bin\moc.exe $(DEFINES) -D_MSC_VER=1900 -D_WIN32 -D_WIN64 -IC:/Qt/Qt5.6.3/5.6.3/msvc2015_64/mkspecs/win32-msvc2015 -IE:/dev/src/libs/libPCDViewer -IE:/dev/src/libs/libPCDViewer -I"C:/Program Files/QGIS 3.4/include" -IE:/dev/depends/LASTools2019/LASlib/inc -IE:/dev/depends/LASTools2019/LASzip/src -IE:/dev/src/libs/libCRS -IE:/dev/src/libs/libParameters -IE:/dev/src/libs -IE:/dev/src/libs/libIGDAL -IE:/dev/src/libs/libPointCloudDbManager -IE:/dev/src/libs/libModelManagementTools -IE:/dev/src/libs/libWidgets -IE:/dev/depends/pcdviewer/PcdViewer_V1.4_src -IE:/dev/depends/pcdviewer/PcdViewer_V1.4_src/pcdviewer -IE:/dev/depends/eigen-eigen-323c052e1731 -IE:/dev/src/libs/libPCDViewer -IE:/dev/depends/pcdviewer/PcdViewer_V1.4_src/basic -IE:/dev/depends/pcdviewer/PcdViewer_V1.4_src/geometry -IE:/dev/depends/pcdviewer/PcdViewer_V1.4_src/math -IE:/dev/depends/pcdviewer/PcdViewer_V1.4_src/QGLViewer -IE:/dev/depends/pcdviewer/PcdViewer_V1.4_src/widget -IE:/dev/depends/CGAL-14.3_vs2014_x64/include -IE:/dev/depends/boost_1_68_0_vs2014_x64 -IC:/Qt/Qt5.6.3/5.6.3/msvc2015_64/include -IC:/Qt/Qt5.6.3/5.6.3/msvc2015_64/include/QtOpenGL -IC:/Qt/Qt5.6.3/5.6.3/msvc2015_64/include/QtWidgets -IC:/Qt/Qt5.6.3/5.6.3/msvc2015_64/include/QtGui -IC:/Qt/Qt5.6.3/5.6.3/msvc2015_64/include/QtANGLE -IC:/Qt/Qt5.6.3/5.6.3/msvc2015_64/include/QtXml -IC:/Qt/Qt5.6.3/5.6.3/msvc2015_64/include/QtCore PCDViewerMainWindow.h -o debug\moc_PCDViewerMainWindow.cpp
 
 debug\moc_PCDViewerManager.cpp: C:\Qt\Qt5.6.3\5.6.3\msvc2015_64\include\QtWidgets\QWidget \
 		C:\Qt\Qt5.6.3\5.6.3\msvc2015_64\include\QtWidgets\qwidget.h \
@@ -2088,40 +2088,40 @@ debug\moc_PCDViewerManager.cpp: C:\Qt\Qt5.6.3\5.6.3\msvc2015_64\include\QtWidget
 		C:\Qt\Qt5.6.3\5.6.3\msvc2015_64\include\QtCore\QDateTime \
 		C:\Qt\Qt5.6.3\5.6.3\msvc2015_64\include\QtCore\qdatetime.h \
 		..\libModelManagementTools\libModelManagementTools_global.h \
-		"C:\Program Files\QGIS 3.10\include\cpl_conv.h" \
-		"C:\Program Files\QGIS 3.10\include\cpl_port.h" \
-		"C:\Program Files\QGIS 3.10\include\cpl_config.h" \
-		"C:\Program Files\QGIS 3.10\include\cpl_vsi.h" \
-		"C:\Program Files\QGIS 3.10\include\cpl_progress.h" \
-		"C:\Program Files\QGIS 3.10\include\cpl_error.h" \
+		"C:\Program Files\QGIS 3.4\include\cpl_conv.h" \
+		"C:\Program Files\QGIS 3.4\include\cpl_port.h" \
+		"C:\Program Files\QGIS 3.4\include\cpl_config.h" \
+		"C:\Program Files\QGIS 3.4\include\cpl_vsi.h" \
+		"C:\Program Files\QGIS 3.4\include\cpl_error.h" \
 		..\libPointCloudDbManager\PointCloudDbManager.h \
 		..\libPointCloudDbManager\PointCloudDbDefinitions.h \
 		..\libIGDAL\SpatiaLite.h \
 		C:\Qt\Qt5.6.3\5.6.3\msvc2015_64\include\QtCore\QStringList \
 		..\libIGDAL\libIGDAL_global.h \
-		"C:\Program Files\QGIS 3.10\include\ogrsf_frmts.h" \
-		"C:\Program Files\QGIS 3.10\include\ogr_feature.h" \
-		"C:\Program Files\QGIS 3.10\include\cpl_atomic_ops.h" \
-		"C:\Program Files\QGIS 3.10\include\ogr_featurestyle.h" \
-		"C:\Program Files\QGIS 3.10\include\cpl_string.h" \
-		"C:\Program Files\QGIS 3.10\include\ogr_core.h" \
-		"C:\Program Files\QGIS 3.10\include\gdal_version.h" \
-		"C:\Program Files\QGIS 3.10\include\ogr_geometry.h" \
-		"C:\Program Files\QGIS 3.10\include\cpl_json.h" \
-		"C:\Program Files\QGIS 3.10\include\ogr_spatialref.h" \
-		"C:\Program Files\QGIS 3.10\include\ogr_srs_api.h" \
-		"C:\Program Files\QGIS 3.10\include\gdal_priv.h" \
-		"C:\Program Files\QGIS 3.10\include\gdal.h" \
-		"C:\Program Files\QGIS 3.10\include\cpl_virtualmem.h" \
-		"C:\Program Files\QGIS 3.10\include\cpl_minixml.h" \
-		"C:\Program Files\QGIS 3.10\include\ogr_api.h" \
-		"C:\Program Files\QGIS 3.10\include\gdal_frmts.h" \
-		"C:\Program Files\QGIS 3.10\include\cpl_multiproc.h" \
+		"C:\Program Files\QGIS 3.4\include\ogrsf_frmts.h" \
+		"C:\Program Files\QGIS 3.4\include\cpl_progress.h" \
+		"C:\Program Files\QGIS 3.4\include\ogr_feature.h" \
+		"C:\Program Files\QGIS 3.4\include\cpl_atomic_ops.h" \
+		"C:\Program Files\QGIS 3.4\include\ogr_featurestyle.h" \
+		"C:\Program Files\QGIS 3.4\include\cpl_string.h" \
+		"C:\Program Files\QGIS 3.4\include\ogr_core.h" \
+		"C:\Program Files\QGIS 3.4\include\gdal_version.h" \
+		"C:\Program Files\QGIS 3.4\include\ogr_geometry.h" \
+		"C:\Program Files\QGIS 3.4\include\cpl_json.h" \
+		"C:\Program Files\QGIS 3.4\include\ogr_spatialref.h" \
+		"C:\Program Files\QGIS 3.4\include\ogr_srs_api.h" \
+		"C:\Program Files\QGIS 3.4\include\gdal_priv.h" \
+		"C:\Program Files\QGIS 3.4\include\gdal.h" \
+		"C:\Program Files\QGIS 3.4\include\cpl_virtualmem.h" \
+		"C:\Program Files\QGIS 3.4\include\cpl_minixml.h" \
+		"C:\Program Files\QGIS 3.4\include\ogr_api.h" \
+		"C:\Program Files\QGIS 3.4\include\gdal_frmts.h" \
+		"C:\Program Files\QGIS 3.4\include\cpl_multiproc.h" \
 		..\libPointCloudDbManager\libpointclouddbmanager_global.h \
 		..\libPointCloudDbManager\PointCloudSpatialiteDb.h \
 		C:\Qt\Qt5.6.3\5.6.3\msvc2015_64\include\QtCore\QString \
 		C:\Qt\Qt5.6.3\5.6.3\msvc2015_64\include\QtCore\QMutex \
-		"C:\Program Files\QGIS 3.10\include\gdal_utils.h" \
+		"C:\Program Files\QGIS 3.4\include\gdal_utils.h" \
 		libPCDViewer_global.h \
 		PCDViewerMainWindow.h \
 		C:\Qt\Qt5.6.3\5.6.3\msvc2015_64\include\QtWidgets\QMainWindow \
@@ -3810,7 +3810,7 @@ debug\moc_PCDViewerManager.cpp: C:\Qt\Qt5.6.3\5.6.3\msvc2015_64\include\QtWidget
 		C:\Qt\Qt5.6.3\5.6.3\msvc2015_64\include\QtCore\qitemselectionmodel.h \
 		..\libWidgets\libwidgets_global.h \
 		PCDViewerManager.h
-	C:\Qt\Qt5.6.3\5.6.3\msvc2015_64\bin\moc.exe $(DEFINES) -D_MSC_VER=1900 -D_WIN32 -D_WIN64 -IC:/Qt/Qt5.6.3/5.6.3/msvc2015_64/mkspecs/win32-msvc2015 -IE:/dev/src/libs/libPCDViewer -IE:/dev/src/libs/libPCDViewer -I"C:/Program Files/QGIS 3.10/include" -IE:/dev/depends/LASTools2019/LASlib/inc -IE:/dev/depends/LASTools2019/LASzip/src -IE:/dev/src/libs/libCRS -IE:/dev/src/libs/libParameters -IE:/dev/src/libs -IE:/dev/src/libs/libIGDAL -IE:/dev/src/libs/libPointCloudDbManager -IE:/dev/src/libs/libModelManagementTools -IE:/dev/src/libs/libWidgets -IE:/dev/depends/pcdviewer/PcdViewer_V1.4_src -IE:/dev/depends/pcdviewer/PcdViewer_V1.4_src/pcdviewer -IE:/dev/depends/eigen-eigen-323c052e1731 -IE:/dev/src/libs/libPCDViewer -IE:/dev/depends/pcdviewer/PcdViewer_V1.4_src/basic -IE:/dev/depends/pcdviewer/PcdViewer_V1.4_src/geometry -IE:/dev/depends/pcdviewer/PcdViewer_V1.4_src/math -IE:/dev/depends/pcdviewer/PcdViewer_V1.4_src/QGLViewer -IE:/dev/depends/pcdviewer/PcdViewer_V1.4_src/widget -IE:/dev/depends/CGAL-14.3_vs2014_x64/include -IE:/dev/depends/boost_1_68_0_vs2014_x64 -IC:/Qt/Qt5.6.3/5.6.3/msvc2015_64/include -IC:/Qt/Qt5.6.3/5.6.3/msvc2015_64/include/QtOpenGL -IC:/Qt/Qt5.6.3/5.6.3/msvc2015_64/include/QtWidgets -IC:/Qt/Qt5.6.3/5.6.3/msvc2015_64/include/QtGui -IC:/Qt/Qt5.6.3/5.6.3/msvc2015_64/include/QtANGLE -IC:/Qt/Qt5.6.3/5.6.3/msvc2015_64/include/QtXml -IC:/Qt/Qt5.6.3/5.6.3/msvc2015_64/include/QtCore PCDViewerManager.h -o debug\moc_PCDViewerManager.cpp
+	C:\Qt\Qt5.6.3\5.6.3\msvc2015_64\bin\moc.exe $(DEFINES) -D_MSC_VER=1900 -D_WIN32 -D_WIN64 -IC:/Qt/Qt5.6.3/5.6.3/msvc2015_64/mkspecs/win32-msvc2015 -IE:/dev/src/libs/libPCDViewer -IE:/dev/src/libs/libPCDViewer -I"C:/Program Files/QGIS 3.4/include" -IE:/dev/depends/LASTools2019/LASlib/inc -IE:/dev/depends/LASTools2019/LASzip/src -IE:/dev/src/libs/libCRS -IE:/dev/src/libs/libParameters -IE:/dev/src/libs -IE:/dev/src/libs/libIGDAL -IE:/dev/src/libs/libPointCloudDbManager -IE:/dev/src/libs/libModelManagementTools -IE:/dev/src/libs/libWidgets -IE:/dev/depends/pcdviewer/PcdViewer_V1.4_src -IE:/dev/depends/pcdviewer/PcdViewer_V1.4_src/pcdviewer -IE:/dev/depends/eigen-eigen-323c052e1731 -IE:/dev/src/libs/libPCDViewer -IE:/dev/depends/pcdviewer/PcdViewer_V1.4_src/basic -IE:/dev/depends/pcdviewer/PcdViewer_V1.4_src/geometry -IE:/dev/depends/pcdviewer/PcdViewer_V1.4_src/math -IE:/dev/depends/pcdviewer/PcdViewer_V1.4_src/QGLViewer -IE:/dev/depends/pcdviewer/PcdViewer_V1.4_src/widget -IE:/dev/depends/CGAL-14.3_vs2014_x64/include -IE:/dev/depends/boost_1_68_0_vs2014_x64 -IC:/Qt/Qt5.6.3/5.6.3/msvc2015_64/include -IC:/Qt/Qt5.6.3/5.6.3/msvc2015_64/include/QtOpenGL -IC:/Qt/Qt5.6.3/5.6.3/msvc2015_64/include/QtWidgets -IC:/Qt/Qt5.6.3/5.6.3/msvc2015_64/include/QtGui -IC:/Qt/Qt5.6.3/5.6.3/msvc2015_64/include/QtANGLE -IC:/Qt/Qt5.6.3/5.6.3/msvc2015_64/include/QtXml -IC:/Qt/Qt5.6.3/5.6.3/msvc2015_64/include/QtCore PCDViewerManager.h -o debug\moc_PCDViewerManager.cpp
 
 debug\moc_paint_canvas.cpp: ..\..\..\depends\pcdviewer\PcdViewer_V1.4_src\qglviewer\qglviewer.h \
 		..\..\..\depends\pcdviewer\PcdViewer_V1.4_src\qglviewer\camera.h \
@@ -5605,7 +5605,7 @@ debug\moc_paint_canvas.cpp: ..\..\..\depends\pcdviewer\PcdViewer_V1.4_src\qglvie
 		..\..\..\depends\pcdviewer\PcdViewer_V1.4_src\geometry\vertex.h \
 		..\..\..\depends\pcdviewer\PcdViewer_V1.4_src\geometry\selectable_item.h \
 		paint_canvas.h
-	C:\Qt\Qt5.6.3\5.6.3\msvc2015_64\bin\moc.exe $(DEFINES) -D_MSC_VER=1900 -D_WIN32 -D_WIN64 -IC:/Qt/Qt5.6.3/5.6.3/msvc2015_64/mkspecs/win32-msvc2015 -IE:/dev/src/libs/libPCDViewer -IE:/dev/src/libs/libPCDViewer -I"C:/Program Files/QGIS 3.10/include" -IE:/dev/depends/LASTools2019/LASlib/inc -IE:/dev/depends/LASTools2019/LASzip/src -IE:/dev/src/libs/libCRS -IE:/dev/src/libs/libParameters -IE:/dev/src/libs -IE:/dev/src/libs/libIGDAL -IE:/dev/src/libs/libPointCloudDbManager -IE:/dev/src/libs/libModelManagementTools -IE:/dev/src/libs/libWidgets -IE:/dev/depends/pcdviewer/PcdViewer_V1.4_src -IE:/dev/depends/pcdviewer/PcdViewer_V1.4_src/pcdviewer -IE:/dev/depends/eigen-eigen-323c052e1731 -IE:/dev/src/libs/libPCDViewer -IE:/dev/depends/pcdviewer/PcdViewer_V1.4_src/basic -IE:/dev/depends/pcdviewer/PcdViewer_V1.4_src/geometry -IE:/dev/depends/pcdviewer/PcdViewer_V1.4_src/math -IE:/dev/depends/pcdviewer/PcdViewer_V1.4_src/QGLViewer -IE:/dev/depends/pcdviewer/PcdViewer_V1.4_src/widget -IE:/dev/depends/CGAL-14.3_vs2014_x64/include -IE:/dev/depends/boost_1_68_0_vs2014_x64 -IC:/Qt/Qt5.6.3/5.6.3/msvc2015_64/include -IC:/Qt/Qt5.6.3/5.6.3/msvc2015_64/include/QtOpenGL -IC:/Qt/Qt5.6.3/5.6.3/msvc2015_64/include/QtWidgets -IC:/Qt/Qt5.6.3/5.6.3/msvc2015_64/include/QtGui -IC:/Qt/Qt5.6.3/5.6.3/msvc2015_64/include/QtANGLE -IC:/Qt/Qt5.6.3/5.6.3/msvc2015_64/include/QtXml -IC:/Qt/Qt5.6.3/5.6.3/msvc2015_64/include/QtCore paint_canvas.h -o debug\moc_paint_canvas.cpp
+	C:\Qt\Qt5.6.3\5.6.3\msvc2015_64\bin\moc.exe $(DEFINES) -D_MSC_VER=1900 -D_WIN32 -D_WIN64 -IC:/Qt/Qt5.6.3/5.6.3/msvc2015_64/mkspecs/win32-msvc2015 -IE:/dev/src/libs/libPCDViewer -IE:/dev/src/libs/libPCDViewer -I"C:/Program Files/QGIS 3.4/include" -IE:/dev/depends/LASTools2019/LASlib/inc -IE:/dev/depends/LASTools2019/LASzip/src -IE:/dev/src/libs/libCRS -IE:/dev/src/libs/libParameters -IE:/dev/src/libs -IE:/dev/src/libs/libIGDAL -IE:/dev/src/libs/libPointCloudDbManager -IE:/dev/src/libs/libModelManagementTools -IE:/dev/src/libs/libWidgets -IE:/dev/depends/pcdviewer/PcdViewer_V1.4_src -IE:/dev/depends/pcdviewer/PcdViewer_V1.4_src/pcdviewer -IE:/dev/depends/eigen-eigen-323c052e1731 -IE:/dev/src/libs/libPCDViewer -IE:/dev/depends/pcdviewer/PcdViewer_V1.4_src/basic -IE:/dev/depends/pcdviewer/PcdViewer_V1.4_src/geometry -IE:/dev/depends/pcdviewer/PcdViewer_V1.4_src/math -IE:/dev/depends/pcdviewer/PcdViewer_V1.4_src/QGLViewer -IE:/dev/depends/pcdviewer/PcdViewer_V1.4_src/widget -IE:/dev/depends/CGAL-14.3_vs2014_x64/include -IE:/dev/depends/boost_1_68_0_vs2014_x64 -IC:/Qt/Qt5.6.3/5.6.3/msvc2015_64/include -IC:/Qt/Qt5.6.3/5.6.3/msvc2015_64/include/QtOpenGL -IC:/Qt/Qt5.6.3/5.6.3/msvc2015_64/include/QtWidgets -IC:/Qt/Qt5.6.3/5.6.3/msvc2015_64/include/QtGui -IC:/Qt/Qt5.6.3/5.6.3/msvc2015_64/include/QtANGLE -IC:/Qt/Qt5.6.3/5.6.3/msvc2015_64/include/QtXml -IC:/Qt/Qt5.6.3/5.6.3/msvc2015_64/include/QtCore paint_canvas.h -o debug\moc_paint_canvas.cpp
 
 compiler_moc_source_make_all:
 compiler_moc_source_clean:
@@ -7498,85 +7498,43 @@ debug\PCDViewerMainWindow.obj: PCDViewerMainWindow.cpp C:\Qt\Qt5.6.3\5.6.3\msvc2
 		C:\Qt\Qt5.6.3\5.6.3\msvc2015_64\include\QtWidgets\qstyleditemdelegate.h \
 		..\libWidgets\libwidgets_global.h \
 		ui_PCDViewerMainWindow.h \
-		C:\Qt\Qt5.6.3\5.6.3\msvc2015_64\include\QtCore\QVariant \
-		C:\Qt\Qt5.6.3\5.6.3\msvc2015_64\include\QtWidgets\QAction \
-		C:\Qt\Qt5.6.3\5.6.3\msvc2015_64\include\QtWidgets\qaction.h \
-		C:\Qt\Qt5.6.3\5.6.3\msvc2015_64\include\QtWidgets\qactiongroup.h \
-		C:\Qt\Qt5.6.3\5.6.3\msvc2015_64\include\QtWidgets\QApplication \
-		C:\Qt\Qt5.6.3\5.6.3\msvc2015_64\include\QtWidgets\qapplication.h \
-		C:\Qt\Qt5.6.3\5.6.3\msvc2015_64\include\QtCore\qcoreapplication.h \
-		C:\Qt\Qt5.6.3\5.6.3\msvc2015_64\include\QtCore\qeventloop.h \
-		C:\Qt\Qt5.6.3\5.6.3\msvc2015_64\include\QtWidgets\qdesktopwidget.h \
-		C:\Qt\Qt5.6.3\5.6.3\msvc2015_64\include\QtGui\qguiapplication.h \
-		C:\Qt\Qt5.6.3\5.6.3\msvc2015_64\include\QtGui\qinputmethod.h \
-		C:\Qt\Qt5.6.3\5.6.3\msvc2015_64\include\QtWidgets\QButtonGroup \
-		C:\Qt\Qt5.6.3\5.6.3\msvc2015_64\include\QtWidgets\qbuttongroup.h \
-		C:\Qt\Qt5.6.3\5.6.3\msvc2015_64\include\QtWidgets\QCheckBox \
-		C:\Qt\Qt5.6.3\5.6.3\msvc2015_64\include\QtWidgets\qcheckbox.h \
-		C:\Qt\Qt5.6.3\5.6.3\msvc2015_64\include\QtWidgets\qabstractbutton.h \
-		C:\Qt\Qt5.6.3\5.6.3\msvc2015_64\include\QtWidgets\QDockWidget \
-		C:\Qt\Qt5.6.3\5.6.3\msvc2015_64\include\QtWidgets\qdockwidget.h \
-		C:\Qt\Qt5.6.3\5.6.3\msvc2015_64\include\QtWidgets\QFrame \
-		C:\Qt\Qt5.6.3\5.6.3\msvc2015_64\include\QtWidgets\QGridLayout \
-		C:\Qt\Qt5.6.3\5.6.3\msvc2015_64\include\QtWidgets\qgridlayout.h \
-		C:\Qt\Qt5.6.3\5.6.3\msvc2015_64\include\QtWidgets\qlayout.h \
-		C:\Qt\Qt5.6.3\5.6.3\msvc2015_64\include\QtWidgets\qlayoutitem.h \
-		C:\Qt\Qt5.6.3\5.6.3\msvc2015_64\include\QtWidgets\qboxlayout.h \
-		C:\Qt\Qt5.6.3\5.6.3\msvc2015_64\include\QtWidgets\QHBoxLayout \
-		C:\Qt\Qt5.6.3\5.6.3\msvc2015_64\include\QtWidgets\QHeaderView \
-		C:\Qt\Qt5.6.3\5.6.3\msvc2015_64\include\QtWidgets\qheaderview.h \
-		C:\Qt\Qt5.6.3\5.6.3\msvc2015_64\include\QtWidgets\QMenu \
-		C:\Qt\Qt5.6.3\5.6.3\msvc2015_64\include\QtWidgets\qmenu.h \
-		C:\Qt\Qt5.6.3\5.6.3\msvc2015_64\include\QtWidgets\QMenuBar \
-		C:\Qt\Qt5.6.3\5.6.3\msvc2015_64\include\QtWidgets\qmenubar.h \
-		C:\Qt\Qt5.6.3\5.6.3\msvc2015_64\include\QtWidgets\QPushButton \
-		C:\Qt\Qt5.6.3\5.6.3\msvc2015_64\include\QtWidgets\qpushbutton.h \
-		C:\Qt\Qt5.6.3\5.6.3\msvc2015_64\include\QtWidgets\QRadioButton \
-		C:\Qt\Qt5.6.3\5.6.3\msvc2015_64\include\QtWidgets\qradiobutton.h \
-		C:\Qt\Qt5.6.3\5.6.3\msvc2015_64\include\QtWidgets\QSpacerItem \
-		C:\Qt\Qt5.6.3\5.6.3\msvc2015_64\include\QtWidgets\QTabWidget \
-		C:\Qt\Qt5.6.3\5.6.3\msvc2015_64\include\QtWidgets\QToolBar \
-		C:\Qt\Qt5.6.3\5.6.3\msvc2015_64\include\QtWidgets\qtoolbar.h \
-		C:\Qt\Qt5.6.3\5.6.3\msvc2015_64\include\QtWidgets\QToolBox \
-		C:\Qt\Qt5.6.3\5.6.3\msvc2015_64\include\QtWidgets\qtoolbox.h \
-		C:\Qt\Qt5.6.3\5.6.3\msvc2015_64\include\QtWidgets\QTreeWidget \
 		..\libModelManagementTools\ModelDbManager.h \
 		C:\Qt\Qt5.6.3\5.6.3\msvc2015_64\include\QtCore\QTextStream \
 		C:\Qt\Qt5.6.3\5.6.3\msvc2015_64\include\QtCore\QDateTime \
 		..\libModelManagementTools\libModelManagementTools_global.h \
-		"C:\Program Files\QGIS 3.10\include\cpl_conv.h" \
-		"C:\Program Files\QGIS 3.10\include\cpl_port.h" \
-		"C:\Program Files\QGIS 3.10\include\cpl_config.h" \
-		"C:\Program Files\QGIS 3.10\include\cpl_vsi.h" \
-		"C:\Program Files\QGIS 3.10\include\cpl_progress.h" \
-		"C:\Program Files\QGIS 3.10\include\cpl_error.h" \
+		"C:\Program Files\QGIS 3.4\include\cpl_conv.h" \
+		"C:\Program Files\QGIS 3.4\include\cpl_port.h" \
+		"C:\Program Files\QGIS 3.4\include\cpl_config.h" \
+		"C:\Program Files\QGIS 3.4\include\cpl_vsi.h" \
+		"C:\Program Files\QGIS 3.4\include\cpl_error.h" \
 		..\libPointCloudDbManager\PointCloudDbManager.h \
 		..\libPointCloudDbManager\PointCloudDbDefinitions.h \
 		..\libIGDAL\SpatiaLite.h \
 		C:\Qt\Qt5.6.3\5.6.3\msvc2015_64\include\QtCore\QStringList \
 		..\libIGDAL\libIGDAL_global.h \
-		"C:\Program Files\QGIS 3.10\include\ogrsf_frmts.h" \
-		"C:\Program Files\QGIS 3.10\include\ogr_feature.h" \
-		"C:\Program Files\QGIS 3.10\include\cpl_atomic_ops.h" \
-		"C:\Program Files\QGIS 3.10\include\ogr_featurestyle.h" \
-		"C:\Program Files\QGIS 3.10\include\cpl_string.h" \
-		"C:\Program Files\QGIS 3.10\include\ogr_core.h" \
-		"C:\Program Files\QGIS 3.10\include\gdal_version.h" \
-		"C:\Program Files\QGIS 3.10\include\ogr_geometry.h" \
-		"C:\Program Files\QGIS 3.10\include\cpl_json.h" \
-		"C:\Program Files\QGIS 3.10\include\ogr_spatialref.h" \
-		"C:\Program Files\QGIS 3.10\include\ogr_srs_api.h" \
-		"C:\Program Files\QGIS 3.10\include\gdal_priv.h" \
-		"C:\Program Files\QGIS 3.10\include\gdal.h" \
-		"C:\Program Files\QGIS 3.10\include\cpl_virtualmem.h" \
-		"C:\Program Files\QGIS 3.10\include\cpl_minixml.h" \
-		"C:\Program Files\QGIS 3.10\include\ogr_api.h" \
-		"C:\Program Files\QGIS 3.10\include\gdal_frmts.h" \
-		"C:\Program Files\QGIS 3.10\include\cpl_multiproc.h" \
+		"C:\Program Files\QGIS 3.4\include\ogrsf_frmts.h" \
+		"C:\Program Files\QGIS 3.4\include\cpl_progress.h" \
+		"C:\Program Files\QGIS 3.4\include\ogr_feature.h" \
+		"C:\Program Files\QGIS 3.4\include\cpl_atomic_ops.h" \
+		"C:\Program Files\QGIS 3.4\include\ogr_featurestyle.h" \
+		"C:\Program Files\QGIS 3.4\include\cpl_string.h" \
+		"C:\Program Files\QGIS 3.4\include\ogr_core.h" \
+		"C:\Program Files\QGIS 3.4\include\gdal_version.h" \
+		"C:\Program Files\QGIS 3.4\include\ogr_geometry.h" \
+		"C:\Program Files\QGIS 3.4\include\cpl_json.h" \
+		"C:\Program Files\QGIS 3.4\include\ogr_spatialref.h" \
+		"C:\Program Files\QGIS 3.4\include\ogr_srs_api.h" \
+		"C:\Program Files\QGIS 3.4\include\gdal_priv.h" \
+		"C:\Program Files\QGIS 3.4\include\gdal.h" \
+		"C:\Program Files\QGIS 3.4\include\cpl_virtualmem.h" \
+		"C:\Program Files\QGIS 3.4\include\cpl_minixml.h" \
+		"C:\Program Files\QGIS 3.4\include\ogr_api.h" \
+		"C:\Program Files\QGIS 3.4\include\gdal_frmts.h" \
+		"C:\Program Files\QGIS 3.4\include\cpl_multiproc.h" \
 		..\libPointCloudDbManager\libpointclouddbmanager_global.h \
 		..\libPointCloudDbManager\PointCloudSpatialiteDb.h \
 		C:\Qt\Qt5.6.3\5.6.3\msvc2015_64\include\QtCore\QMutex \
-		"C:\Program Files\QGIS 3.10\include\gdal_utils.h" \
+		"C:\Program Files\QGIS 3.4\include\gdal_utils.h" \
 		..\libModelManagementTools\ModelDbManagerDefinitions.h \
 		..\libModelManagementTools\ModelObject.h \
 		..\libModelManagementTools\ModelObjectClass.h \
@@ -7619,7 +7577,9 @@ debug\PCDViewerMainWindow.obj: PCDViewerMainWindow.cpp C:\Qt\Qt5.6.3\5.6.3\msvc2
 		C:\Qt\Qt5.6.3\5.6.3\msvc2015_64\include\QtCore\qjsondocument.h \
 		C:\Qt\Qt5.6.3\5.6.3\msvc2015_64\include\QtCore\qjsonobject.h \
 		C:\Qt\Qt5.6.3\5.6.3\msvc2015_64\include\QtCore\qabstracteventdispatcher.h \
+		C:\Qt\Qt5.6.3\5.6.3\msvc2015_64\include\QtCore\qeventloop.h \
 		C:\Qt\Qt5.6.3\5.6.3\msvc2015_64\include\QtCore\qabstractnativeeventfilter.h \
+		C:\Qt\Qt5.6.3\5.6.3\msvc2015_64\include\QtCore\qcoreapplication.h \
 		C:\Qt\Qt5.6.3\5.6.3\msvc2015_64\include\QtCore\qmath.h \
 		C:\Qt\Qt5.6.3\5.6.3\msvc2015_64\include\QtCore\qmetaobject.h \
 		C:\Qt\Qt5.6.3\5.6.3\msvc2015_64\include\QtCore\qmimedata.h \
@@ -16874,40 +16834,40 @@ debug\PCDViewerManager.obj: PCDViewerManager.cpp C:\Qt\Qt5.6.3\5.6.3\msvc2015_64
 		C:\Qt\Qt5.6.3\5.6.3\msvc2015_64\include\QtCore\QDateTime \
 		C:\Qt\Qt5.6.3\5.6.3\msvc2015_64\include\QtCore\qdatetime.h \
 		..\libModelManagementTools\libModelManagementTools_global.h \
-		"C:\Program Files\QGIS 3.10\include\cpl_conv.h" \
-		"C:\Program Files\QGIS 3.10\include\cpl_port.h" \
-		"C:\Program Files\QGIS 3.10\include\cpl_config.h" \
-		"C:\Program Files\QGIS 3.10\include\cpl_vsi.h" \
-		"C:\Program Files\QGIS 3.10\include\cpl_progress.h" \
-		"C:\Program Files\QGIS 3.10\include\cpl_error.h" \
+		"C:\Program Files\QGIS 3.4\include\cpl_conv.h" \
+		"C:\Program Files\QGIS 3.4\include\cpl_port.h" \
+		"C:\Program Files\QGIS 3.4\include\cpl_config.h" \
+		"C:\Program Files\QGIS 3.4\include\cpl_vsi.h" \
+		"C:\Program Files\QGIS 3.4\include\cpl_error.h" \
 		..\libPointCloudDbManager\PointCloudDbManager.h \
 		..\libPointCloudDbManager\PointCloudDbDefinitions.h \
 		..\libIGDAL\SpatiaLite.h \
 		C:\Qt\Qt5.6.3\5.6.3\msvc2015_64\include\QtCore\QStringList \
 		..\libIGDAL\libIGDAL_global.h \
-		"C:\Program Files\QGIS 3.10\include\ogrsf_frmts.h" \
-		"C:\Program Files\QGIS 3.10\include\ogr_feature.h" \
-		"C:\Program Files\QGIS 3.10\include\cpl_atomic_ops.h" \
-		"C:\Program Files\QGIS 3.10\include\ogr_featurestyle.h" \
-		"C:\Program Files\QGIS 3.10\include\cpl_string.h" \
-		"C:\Program Files\QGIS 3.10\include\ogr_core.h" \
-		"C:\Program Files\QGIS 3.10\include\gdal_version.h" \
-		"C:\Program Files\QGIS 3.10\include\ogr_geometry.h" \
-		"C:\Program Files\QGIS 3.10\include\cpl_json.h" \
-		"C:\Program Files\QGIS 3.10\include\ogr_spatialref.h" \
-		"C:\Program Files\QGIS 3.10\include\ogr_srs_api.h" \
-		"C:\Program Files\QGIS 3.10\include\gdal_priv.h" \
-		"C:\Program Files\QGIS 3.10\include\gdal.h" \
-		"C:\Program Files\QGIS 3.10\include\cpl_virtualmem.h" \
-		"C:\Program Files\QGIS 3.10\include\cpl_minixml.h" \
-		"C:\Program Files\QGIS 3.10\include\ogr_api.h" \
-		"C:\Program Files\QGIS 3.10\include\gdal_frmts.h" \
-		"C:\Program Files\QGIS 3.10\include\cpl_multiproc.h" \
+		"C:\Program Files\QGIS 3.4\include\ogrsf_frmts.h" \
+		"C:\Program Files\QGIS 3.4\include\cpl_progress.h" \
+		"C:\Program Files\QGIS 3.4\include\ogr_feature.h" \
+		"C:\Program Files\QGIS 3.4\include\cpl_atomic_ops.h" \
+		"C:\Program Files\QGIS 3.4\include\ogr_featurestyle.h" \
+		"C:\Program Files\QGIS 3.4\include\cpl_string.h" \
+		"C:\Program Files\QGIS 3.4\include\ogr_core.h" \
+		"C:\Program Files\QGIS 3.4\include\gdal_version.h" \
+		"C:\Program Files\QGIS 3.4\include\ogr_geometry.h" \
+		"C:\Program Files\QGIS 3.4\include\cpl_json.h" \
+		"C:\Program Files\QGIS 3.4\include\ogr_spatialref.h" \
+		"C:\Program Files\QGIS 3.4\include\ogr_srs_api.h" \
+		"C:\Program Files\QGIS 3.4\include\gdal_priv.h" \
+		"C:\Program Files\QGIS 3.4\include\gdal.h" \
+		"C:\Program Files\QGIS 3.4\include\cpl_virtualmem.h" \
+		"C:\Program Files\QGIS 3.4\include\cpl_minixml.h" \
+		"C:\Program Files\QGIS 3.4\include\ogr_api.h" \
+		"C:\Program Files\QGIS 3.4\include\gdal_frmts.h" \
+		"C:\Program Files\QGIS 3.4\include\cpl_multiproc.h" \
 		..\libPointCloudDbManager\libpointclouddbmanager_global.h \
 		..\libPointCloudDbManager\PointCloudSpatialiteDb.h \
 		C:\Qt\Qt5.6.3\5.6.3\msvc2015_64\include\QtCore\QString \
 		C:\Qt\Qt5.6.3\5.6.3\msvc2015_64\include\QtCore\QMutex \
-		"C:\Program Files\QGIS 3.10\include\gdal_utils.h" \
+		"C:\Program Files\QGIS 3.4\include\gdal_utils.h" \
 		libPCDViewer_global.h \
 		PCDViewerMainWindow.h \
 		C:\Qt\Qt5.6.3\5.6.3\msvc2015_64\include\QtWidgets\QMainWindow \
