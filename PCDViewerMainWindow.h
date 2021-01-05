@@ -296,7 +296,7 @@ private:
     QComboCheckBox* mVisibleObjectsComboCheckBox;
     QComboCheckBox* mLockedObjectClassesComboCheckBox;
     QComboCheckBox* mLockedObjectsComboCheckBox;
-    QComboCheckBox* mSelectedObjectComboCheckBox;
+//    QComboCheckBox* mSelectedObjectComboCheckBox;
 
     bool mViewParametricGeometries;
     QMap<int,QString> mPGNameByPGDbId;

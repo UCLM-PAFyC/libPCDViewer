@@ -105,7 +105,7 @@ PCDViewerMainWindow::~PCDViewerMainWindow()
     delete(mVisibleObjectsComboCheckBox);
     delete(mLockedObjectClassesComboCheckBox);
     delete(mLockedObjectsComboCheckBox);
-    delete(mSelectedObjectComboCheckBox);
+//    delete(mSelectedObjectComboCheckBox);
     delete ui;
 }
 
@@ -362,6 +362,8 @@ bool PCDViewerMainWindow::loadPointCloudFromSpatialiteDb(QString &dbFileName,
     clearPoints();
     QString strAuxError;
     QVector<QString> ignoreTilesTableName;
+    bool showProgressDialog=true;
+    bool tilesFullGeometry=false;
     if(!mPtrPCDbManager->getPointsFromWktGeometry(dbFileName,
                                                  wktGeometry,
                                                  geometryCrsEpsgCode,
@@ -385,7 +387,9 @@ bool PCDViewerMainWindow::loadPointCloudFromSpatialiteDb(QString &dbFileName,
                                                  mPointsHeight,
                                                  mPointsAltitude,
                                                  strAuxError,
-                                                 ignoreTilesTableName))
+                                                 ignoreTilesTableName,
+                                                  showProgressDialog,
+                                                  tilesFullGeometry))
     {
         strError=QObject::tr("PCDViewerMainWindow::loadPointCloudFromSpatialiteDb");
         strError+=QObject::tr("\nError recovering points from database:\n%1\nError:\n%2")
@@ -453,21 +457,27 @@ bool PCDViewerMainWindow::loadPointCloudFromSpatialiteDb(QString &dbFileName,
         {
             maximumAltitude=mPointsAltitude[i];
         }
-        if(mPointsBlue[i]>maximumColorValue)
+        if(mPointsBlue.size()>0)
         {
-            maximumColorValue=mPointsBlue[i];
+            if(mPointsBlue[i]>maximumColorValue)
+            {
+                maximumColorValue=mPointsBlue[i];
+            }
+            if(mPointsRed[i]>maximumColorValue)
+            {
+                maximumColorValue=mPointsRed[i];
+            }
+            if(mPointsGreen[i]>maximumColorValue)
+            {
+                maximumColorValue=mPointsGreen[i];
+            }
         }
-        if(mPointsRed[i]>maximumColorValue)
+        if(mPointsIntensity.size()>0)
         {
-            maximumColorValue=mPointsRed[i];
-        }
-        if(mPointsGreen[i]>maximumColorValue)
-        {
-            maximumColorValue=mPointsGreen[i];
-        }
-        if(mPointsIntensity[i]>maximumIntensity)
-        {
-            maximumIntensity=mPointsIntensity[i];
+            if(mPointsIntensity[i]>maximumIntensity)
+            {
+                maximumIntensity=mPointsIntensity[i];
+            }
         }
     }
     mRGBColorToUnit=1.0/255.0;
@@ -1341,6 +1351,7 @@ void PCDViewerMainWindow::assignColorByHeight()
         return;
     }
     float factor = 256.0f / (mMaximumAltitude - mMinimumAltitude);
+    double classColorToUnit=mObjectClassRGBColorToUnit;
 //    Vertex** vertices=mPointSet->vertices();
 //    int numberOfVertices=mPointSet->nb_vertices();
     Vertex** vertices=mMainCanvas->pointSet()->vertices();
@@ -1353,8 +1364,15 @@ void PCDViewerMainWindow::assignColorByHeight()
             continue;
         }
         Vertex* v = vertices[i];
-        int index = static_cast<int>((v->point().z() - mMinimumAltitude) * factor);
+//        int index = static_cast<int>((v->point().z() - mMinimumAltitude) * factor);
+        int index = static_cast<int>((v->point().z() - 0.) * factor);
         const Colorf& color = Global::color_from_table(index);
+//        float grayHeightColor=(v->point().z() - mMinimumAltitude) * factor;
+//        float grayHeightColor=v->point().z() * factor;
+//        float r=grayHeightColor*classColorToUnit;
+//        float g=grayHeightColor*classColorToUnit;
+//        float b=grayHeightColor*classColorToUnit;
+//        Colorf color(r, g, b);
         v->set_color(color);
         int classId=mPointsClassNew[i];
         mMainCanvas->pointSet()->vertices()[i]->set_visible(mVisibleClassesByClassId[classId]);
