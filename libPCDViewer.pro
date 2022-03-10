@@ -24,17 +24,24 @@ QT       += widgets opengl xml
 TARGET = libPCDViewer
 TEMPLATE = lib
 
-DESTDIR_RELEASE= ./../../../build/release
-DESTDIR_DEBUG= ./../../../build/debug
-#OSGEO4W_PATH="C:\Program Files\QGIS 2.18"
-OSGEO4W_PATH="C:\Program Files\QGIS 3.4"
+#DESTDIR_RELEASE= ./../../../build/release
+#DESTDIR_DEBUG= ./../../../build/debug
+DESTDIR_RELEASE= ./../../../build_osgeo4w/release
+DESTDIR_DEBUG= ./../../../build_osgeo4w/debug
+
+#OSGEO4W_PATH="C:\Program Files\QGIS 3.4"
+OSGEO4W_PATH="E:\dev\OSGeo4Wltr"
+
 LASTOOLS_PATH = ./../../../depends/LASTools2019
 PCDVIEWER_MCVC_PATH=./../../../depends/pcdviewer/PcdViewer_V1.4_src
+
 #BOOS_DIR ="E:\Librerias\boost_1_68_0_vs2014_x64"
 BOOST_PATH= ./../../../depends/boost_1_68_0_vs2014_x64
+
 #CGAL_DIR ="E:\Librerias\CGAL-14.3_vs2014_x64"
 #CGAL_PATH= ./../../../depends/CGAL-5.0-beta1
 CGAL_PATH= ./../../../depends/CGAL-14.3_vs2014_x64
+
 EIGEN_PATH= ./../../../depends/eigen-eigen-323c052e1731
 
 INCLUDEPATH += . $$OSGEO4W_PATH/include
@@ -125,9 +132,10 @@ LIBS += -llibWidgets
 LIBS += -L$$OSGEO4W_PATH\bin
 LIBS += $$OSGEO4W_PATH\lib\geos_c.lib
 #LIBS += $$OSGEO4W_PATH\lib\gsl.lib
-LIBS += $$OSGEO4W_PATH\lib\proj_i.lib
+#LIBS += $$OSGEO4W_PATH\lib\proj_i.lib
+LIBS += $$OSGEO4W_PATH\lib\proj.lib
 LIBS += $$OSGEO4W_PATH\lib\gdal_i.lib
-LIBS += $$OSGEO4W_PATH\lib\libtiff_i.lib
+#LIBS += $$OSGEO4W_PATH\lib\libtiff_i.lib
 
 #LIBS += -lbasic
 #LIBS += -lgeometry
