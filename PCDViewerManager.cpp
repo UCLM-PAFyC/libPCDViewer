@@ -1,7 +1,7 @@
 #include <QEventLoop>
 #include "PCDViewerManager.h"
 
-using namespace PCDViewer;
+using namespace PCDViewer;//
 
 PCDViewerManager * PCDViewerManager::mInstance = 0;
 
