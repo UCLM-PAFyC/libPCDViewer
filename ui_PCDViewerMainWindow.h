@@ -279,7 +279,7 @@ public:
         PCDViewerMainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(PCDViewerMainWindow);
         menubar->setObjectName(QLatin1String("menubar"));
-        menubar->setGeometry(QRect(0, 0, 1062, 21));
+        menubar->setGeometry(QRect(0, 0, 1062, 23));
         menuView = new QMenu(menubar);
         menuView->setObjectName(QLatin1String("menuView"));
         menuSeelct = new QMenu(menubar);
@@ -301,7 +301,7 @@ public:
         toolBox->setMinimumSize(QSize(440, 380));
         manualEditingProcessesPage = new QWidget();
         manualEditingProcessesPage->setObjectName(QLatin1String("manualEditingProcessesPage"));
-        manualEditingProcessesPage->setGeometry(QRect(0, 0, 443, 326));
+        manualEditingProcessesPage->setGeometry(QRect(0, 0, 443, 333));
         gridLayout_11 = new QGridLayout(manualEditingProcessesPage);
         gridLayout_11->setObjectName(QLatin1String("gridLayout_11"));
         processTabWidget_2 = new QTabWidget(manualEditingProcessesPage);
@@ -628,7 +628,7 @@ public:
         toolBox->addItem(manualEditingProcessesPage, QLatin1String("Manual Editing Processes"));
         modelingObjectsProcessingPage = new QWidget();
         modelingObjectsProcessingPage->setObjectName(QLatin1String("modelingObjectsProcessingPage"));
-        modelingObjectsProcessingPage->setGeometry(QRect(0, 0, 440, 326));
+        modelingObjectsProcessingPage->setGeometry(QRect(0, 0, 452, 313));
         gridLayout_6 = new QGridLayout(modelingObjectsProcessingPage);
         gridLayout_6->setObjectName(QLatin1String("gridLayout_6"));
         gridLayout_3 = new QGridLayout();
@@ -949,7 +949,7 @@ public:
         toolBox->setCurrentIndex(1);
         processTabWidget_2->setCurrentIndex(0);
         processSelectedPointsTabWidget_2->setCurrentIndex(0);
-        tabWidget->setCurrentIndex(1);
+        tabWidget->setCurrentIndex(0);
 
 
         QMetaObject::connectSlotsByName(PCDViewerMainWindow);

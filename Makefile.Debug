@@ -2109,6 +2109,7 @@ debug\moc_PCDViewerManager.cpp: C:\Qt\Qt5.11.2\5.11.2\msvc2015_64\include\QtWidg
 		"C:\Program Files\QGIS 3.4\include\cpl_vsi.h" \
 		"C:\Program Files\QGIS 3.4\include\cpl_error.h" \
 		..\libPointCloudDbManager\PointCloudDbManager.h \
+		C:\Qt\Qt5.11.2\5.11.2\msvc2015_64\include\QtCore\QMutex \
 		..\libPointCloudDbManager\PointCloudDbDefinitions.h \
 		..\libIGDAL\SpatiaLite.h \
 		C:\Qt\Qt5.11.2\5.11.2\msvc2015_64\include\QtCore\QStringList \
@@ -2135,7 +2136,6 @@ debug\moc_PCDViewerManager.cpp: C:\Qt\Qt5.11.2\5.11.2\msvc2015_64\include\QtWidg
 		..\libPointCloudDbManager\libpointclouddbmanager_global.h \
 		..\libPointCloudDbManager\PointCloudSpatialiteDb.h \
 		C:\Qt\Qt5.11.2\5.11.2\msvc2015_64\include\QtCore\QString \
-		C:\Qt\Qt5.11.2\5.11.2\msvc2015_64\include\QtCore\QMutex \
 		"C:\Program Files\QGIS 3.4\include\gdal_utils.h" \
 		libPCDViewer_global.h \
 		PCDViewerMainWindow.h \
@@ -7570,6 +7570,7 @@ debug\PCDViewerMainWindow.obj: PCDViewerMainWindow.cpp C:\Qt\Qt5.11.2\5.11.2\msv
 		"C:\Program Files\QGIS 3.4\include\cpl_vsi.h" \
 		"C:\Program Files\QGIS 3.4\include\cpl_error.h" \
 		..\libPointCloudDbManager\PointCloudDbManager.h \
+		C:\Qt\Qt5.11.2\5.11.2\msvc2015_64\include\QtCore\QMutex \
 		..\libPointCloudDbManager\PointCloudDbDefinitions.h \
 		..\libIGDAL\SpatiaLite.h \
 		C:\Qt\Qt5.11.2\5.11.2\msvc2015_64\include\QtCore\QStringList \
@@ -7595,7 +7596,6 @@ debug\PCDViewerMainWindow.obj: PCDViewerMainWindow.cpp C:\Qt\Qt5.11.2\5.11.2\msv
 		"C:\Program Files\QGIS 3.4\include\cpl_multiproc.h" \
 		..\libPointCloudDbManager\libpointclouddbmanager_global.h \
 		..\libPointCloudDbManager\PointCloudSpatialiteDb.h \
-		C:\Qt\Qt5.11.2\5.11.2\msvc2015_64\include\QtCore\QMutex \
 		"C:\Program Files\QGIS 3.4\include\gdal_utils.h" \
 		..\libModelManagementTools\ModelDbManagerDefinitions.h \
 		..\libModelManagementTools\ModelObject.h \
@@ -16903,6 +16903,7 @@ debug\PCDViewerManager.obj: PCDViewerManager.cpp C:\Qt\Qt5.11.2\5.11.2\msvc2015_
 		"C:\Program Files\QGIS 3.4\include\cpl_vsi.h" \
 		"C:\Program Files\QGIS 3.4\include\cpl_error.h" \
 		..\libPointCloudDbManager\PointCloudDbManager.h \
+		C:\Qt\Qt5.11.2\5.11.2\msvc2015_64\include\QtCore\QMutex \
 		..\libPointCloudDbManager\PointCloudDbDefinitions.h \
 		..\libIGDAL\SpatiaLite.h \
 		C:\Qt\Qt5.11.2\5.11.2\msvc2015_64\include\QtCore\QStringList \
@@ -16929,7 +16930,6 @@ debug\PCDViewerManager.obj: PCDViewerManager.cpp C:\Qt\Qt5.11.2\5.11.2\msvc2015_
 		..\libPointCloudDbManager\libpointclouddbmanager_global.h \
 		..\libPointCloudDbManager\PointCloudSpatialiteDb.h \
 		C:\Qt\Qt5.11.2\5.11.2\msvc2015_64\include\QtCore\QString \
-		C:\Qt\Qt5.11.2\5.11.2\msvc2015_64\include\QtCore\QMutex \
 		"C:\Program Files\QGIS 3.4\include\gdal_utils.h" \
 		libPCDViewer_global.h \
 		PCDViewerMainWindow.h \
