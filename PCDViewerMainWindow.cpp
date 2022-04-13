@@ -2754,7 +2754,9 @@ void PCDViewerMainWindow::on_processSelectedObjectPointsPushButton_clicked()
         QVector<int> removeObjectPointsPositionInContainers;
         QVector<int> changeObjectPointsObjectDbId;
         QVector<int> changeObjectPointsPositionInContainers;
-        QMap<int,int> insertObjectPointsTileDbIdByPointIdInTile;
+//        QMap<int,int> insertObjectPointsTileDbIdByPointIdInTile;
+        QVector<int> insertObjectPointsPointIdInTile;
+        QVector<int> insertObjectPointsPointTileDbId;
         QVector<int> insertObjectPointsPositionInContainers;
         for (int i=0; i<selectedPointsIndex.size(); ++i)
         {
@@ -2789,7 +2791,9 @@ void PCDViewerMainWindow::on_processSelectedObjectPointsPushButton_clicked()
                     {
                         if(pointObjectId==MODELDBMANAGERDEFINITIONS_NO_OBJECT_ID) // punto no asignado, hay que insertarlo
                         {
-                            insertObjectPointsTileDbIdByPointIdInTile[pointIdInTile]=tileDbId;
+//                            insertObjectPointsTileDbIdByPointIdInTile[pointIdInTile]=tileDbId;
+                            insertObjectPointsPointIdInTile.push_back(pointIdInTile);
+                            insertObjectPointsPointTileDbId.push_back(tileDbId);
                             insertObjectPointsPositionInContainers.push_back(positionInContainers);
                         }
                         else // punto insertado, hay que cambiarlo
@@ -2806,7 +2810,7 @@ void PCDViewerMainWindow::on_processSelectedObjectPointsPushButton_clicked()
         // Desasignar
         if(removeObjectPointsObjectDbId.size()==0
                 &&changeObjectPointsObjectDbId.size()==0
-                &&insertObjectPointsTileDbIdByPointIdInTile.size()==0)
+                &&insertObjectPointsPointIdInTile.size()==0)
         {
             return;
         }
@@ -2845,25 +2849,25 @@ void PCDViewerMainWindow::on_processSelectedObjectPointsPushButton_clicked()
             }
         }
         // Insertar
-        if(insertObjectPointsTileDbIdByPointIdInTile.size()>0)
+        if(insertObjectPointsPointIdInTile.size()>0)
         {
-            QVector<int> insertTilesDbId;
-            QVector<int> insertPointsIdInTile;
-            QMap<int,int>::const_iterator iterInsert=insertObjectPointsTileDbIdByPointIdInTile.begin();
-            while(iterInsert!=insertObjectPointsTileDbIdByPointIdInTile.end())
-            {
-                int pointIdInTile=iterInsert.key();
-                int tileId=iterInsert.value();
-                insertPointsIdInTile.push_back(pointIdInTile);
-                insertTilesDbId.push_back(tileId);
-                iterInsert++;
-            }
+//            QVector<int> insertTilesDbId=;
+//            QVector<int> insertPointsIdInTile;
+//            QMap<int,int>::const_iterator iterInsert=insertObjectPointsTileDbIdByPointIdInTile.begin();
+//            while(iterInsert!=insertObjectPointsTileDbIdByPointIdInTile.end())
+//            {
+//                int pointIdInTile=iterInsert.key();
+//                int tileId=iterInsert.value();
+//                insertPointsIdInTile.push_back(pointIdInTile);
+//                insertTilesDbId.push_back(tileId);
+//                iterInsert++;
+//            }
 //            QVector<int> insertObjectPointsPositionInContainers;
             QVector<int> insertObjectPointsObjectDbId;
             if(!ptrModelProjectSpatialiteDb->insertObjectPoints(selectedObjectId,
                                                                 pctDbId,
-                                                                insertTilesDbId,
-                                                                insertPointsIdInTile,
+                                                                insertObjectPointsPointTileDbId,
+                                                                insertObjectPointsPointIdInTile,
                                                                 insertObjectPointsObjectDbId,
                                                                 strAuxError))
             {
@@ -2881,7 +2885,7 @@ void PCDViewerMainWindow::on_processSelectedObjectPointsPushButton_clicked()
                 mPointsDbId[positionInContainers]=pointObjectDbId;
             }
         }
-        // Eliminar seleccion?
+        unselectPoints();
     }
     assignColorByObjectClassification();
 }

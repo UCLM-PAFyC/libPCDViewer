@@ -85,7 +85,22 @@ void PaintCanvas::sceneManipulation() {
 void PaintCanvas::updateCanvas() { 
     main_window_->updateStatusBar();
     main_window_->updateAnnotationTable();
-	update();
+    if(point_set_!=NULL)
+    {
+        Vertex** vertices = pointSet()->vertices();
+        int num = pointSet()->nb_vertices();
+        int numberOfSelectedPoints=0;
+        for (int i=0; i<num; ++i) {
+            Vertex* v = vertices[i];
+            if (v->is_selected()) numberOfSelectedPoints++;
+        }
+
+        Logger::output("[SelectTool]: ") << numberOfSelectedPoints << " points selected." << Logger::endl();
+    //    if (b)
+    //    else
+    //        Logger::output("[SelectTool]: ") << selected_object_indices_.size() << " points deselected." << Logger::endl();
+    }
+    update();
 }
 
 
