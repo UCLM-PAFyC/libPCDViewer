@@ -26,11 +26,14 @@ TEMPLATE = lib
 
 #DESTDIR_RELEASE= ./../../../build/release
 #DESTDIR_DEBUG= ./../../../build/debug
-DESTDIR_RELEASE= ./../../../build_osgeo4w/release
-DESTDIR_DEBUG= ./../../../build_osgeo4w/debug
+#DESTDIR_RELEASE= ./../../../build_osgeo4w/release
+#DESTDIR_DEBUG= ./../../../build_osgeo4w/debug
+DESTDIR_RELEASE= ./../../../build_osgeo4w_3_28_9/release
+DESTDIR_DEBUG= ./../../../build_osgeo4w_3_28_9/debug
 
 #OSGEO4W_PATH="C:\Program Files\QGIS 3.4"
-OSGEO4W_PATH="E:\dev\OSGeo4Wltr"
+#OSGEO4W_PATH="E:\dev\OSGeo4Wltr"
+OSGEO4W_PATH="E:\dev\OSGeo4Wltr_3_28_9"
 
 LASTOOLS_PATH = ./../../../depends/LASTools2019
 PCDVIEWER_MCVC_PATH=./../../../depends/pcdviewer/PcdViewer_V1.4_src

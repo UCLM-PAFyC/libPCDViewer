@@ -16,10 +16,10 @@ CXX           = cl
 DEFINES       = -DUNICODE -D_UNICODE -DWIN32 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -DWIN64 -DLIBPCDVIEWER_LIBRARY -DQT_OPENGL_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_XML_LIB -DQT_CORE_LIB -D_WINDLL
 CFLAGS        = -nologo -Zc:wchar_t -FS -Zc:strictStrings -Zi -MDd -W3 -w44456 -w44457 -w44458 /Fddebug\libPCDViewer.vc.pdb $(DEFINES)
 CXXFLAGS      = -nologo -Zc:wchar_t -FS -Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -Zi -MDd -W3 -w34100 -w34189 -w44996 -w44456 -w44457 -w44458 -wd4577 -wd4467 -EHsc /Fddebug\libPCDViewer.vc.pdb $(DEFINES)
-INCPATH       = -I. -I. -I..\..\..\OSGeo4Wltr\include -I..\..\..\depends\LASTools2019\LASlib\inc -I..\..\..\depends\LASTools2019\LASzip\src -I..\..\libs\libCRS -I..\..\libs\libParameters -I..\..\libs -I..\..\libs\libIGDAL -I..\..\libs\libPointCloudDbManager -I..\..\libs\libModelManagementTools -I..\..\libs\libWidgets -I..\..\..\depends\pcdviewer\PcdViewer_V1.4_src -I..\..\..\depends\pcdviewer\PcdViewer_V1.4_src\pcdviewer -I..\..\..\depends\eigen-eigen-323c052e1731 -I. -I..\..\..\depends\pcdviewer\PcdViewer_V1.4_src\basic -I..\..\..\depends\pcdviewer\PcdViewer_V1.4_src\geometry -I..\..\..\depends\pcdviewer\PcdViewer_V1.4_src\math -I..\..\..\depends\pcdviewer\PcdViewer_V1.4_src\QGLViewer -I..\..\..\depends\pcdviewer\PcdViewer_V1.4_src\widget -I..\..\..\depends\CGAL-14.3_vs2014_x64\include -I..\..\..\depends\boost_1_68_0_vs2014_x64 -IC:\Qt\Qt5.15.2\5.15.2\msvc2015_64\include -IC:\Qt\Qt5.15.2\5.15.2\msvc2015_64\include\QtOpenGL -IC:\Qt\Qt5.15.2\5.15.2\msvc2015_64\include\QtWidgets -IC:\Qt\Qt5.15.2\5.15.2\msvc2015_64\include\QtGui -IC:\Qt\Qt5.15.2\5.15.2\msvc2015_64\include\QtANGLE -IC:\Qt\Qt5.15.2\5.15.2\msvc2015_64\include\QtXml -IC:\Qt\Qt5.15.2\5.15.2\msvc2015_64\include\QtCore -Idebug -I. -I/include -IC:\Qt\Qt5.15.2\5.15.2\msvc2015_64\mkspecs\win32-msvc 
+INCPATH       = -I. -I. -I..\..\..\OSGeo4Wltr_3_28_9\include -I..\..\..\depends\LASTools2019\LASlib\inc -I..\..\..\depends\LASTools2019\LASzip\src -I..\..\libs\libCRS -I..\..\libs\libParameters -I..\..\libs -I..\..\libs\libIGDAL -I..\..\libs\libPointCloudDbManager -I..\..\libs\libModelManagementTools -I..\..\libs\libWidgets -I..\..\..\depends\pcdviewer\PcdViewer_V1.4_src -I..\..\..\depends\pcdviewer\PcdViewer_V1.4_src\pcdviewer -I..\..\..\depends\eigen-eigen-323c052e1731 -I. -I..\..\..\depends\pcdviewer\PcdViewer_V1.4_src\basic -I..\..\..\depends\pcdviewer\PcdViewer_V1.4_src\geometry -I..\..\..\depends\pcdviewer\PcdViewer_V1.4_src\math -I..\..\..\depends\pcdviewer\PcdViewer_V1.4_src\QGLViewer -I..\..\..\depends\pcdviewer\PcdViewer_V1.4_src\widget -I..\..\..\depends\CGAL-14.3_vs2014_x64\include -I..\..\..\depends\boost_1_68_0_vs2014_x64 -IC:\Qt\Qt5.15.2\5.15.2\msvc2015_64\include -IC:\Qt\Qt5.15.2\5.15.2\msvc2015_64\include\QtOpenGL -IC:\Qt\Qt5.15.2\5.15.2\msvc2015_64\include\QtWidgets -IC:\Qt\Qt5.15.2\5.15.2\msvc2015_64\include\QtGui -IC:\Qt\Qt5.15.2\5.15.2\msvc2015_64\include\QtANGLE -IC:\Qt\Qt5.15.2\5.15.2\msvc2015_64\include\QtXml -IC:\Qt\Qt5.15.2\5.15.2\msvc2015_64\include\QtCore -Idebug -I. -I/include -IC:\Qt\Qt5.15.2\5.15.2\msvc2015_64\mkspecs\win32-msvc 
 LINKER        = link
 LFLAGS        = /NOLOGO /DYNAMICBASE /NXCOMPAT /DEBUG /DLL /SUBSYSTEM:WINDOWS
-LIBS          = /LIBPATH:..\..\..\build_osgeo4w\debug /LIBPATH:..\..\..\depends\LASTools2019\lib64D ..\..\..\depends\LASTools2019\lib64D\laslib.lib ..\..\..\depends\CGAL-14.3_vs2014_x64\lib\CGAL-vc140-mt-gd-4.13.lib ..\..\..\depends\CGAL-14.3_vs2014_x64\lib\CGAL-vc140-mt-4.13.lib ..\..\..\depends\pcdviewer\PcdViewer_V1.4_src\x64\Debug\basic.lib ..\..\..\depends\pcdviewer\PcdViewer_V1.4_src\x64\Debug\geometry.lib ..\..\..\depends\pcdviewer\PcdViewer_V1.4_src\x64\Debug\math.lib ..\..\..\depends\pcdviewer\PcdViewer_V1.4_src\x64\Debug\qglviewer.lib ..\..\..\depends\pcdviewer\PcdViewer_V1.4_src\x64\Debug\widget.lib ..\..\..\build_osgeo4w\debug\libPointCloudDbManager.lib ..\..\..\build_osgeo4w\debug\libModelManagementTools.lib ..\..\..\build_osgeo4w\debug\libWidgets.lib /LIBPATH:E:\dev\OSGeo4Wltr\bin E:\dev\OSGeo4Wltr\lib\geos_c.lib E:\dev\OSGeo4Wltr\lib\proj.lib E:\dev\OSGeo4Wltr\lib\gdal_i.lib opengl32.lib glu32.lib C:\Qt\Qt5.15.2\5.15.2\msvc2015_64\lib\Qt5OpenGLd.lib C:\Qt\Qt5.15.2\5.15.2\msvc2015_64\lib\Qt5Widgetsd.lib C:\Qt\Qt5.15.2\5.15.2\msvc2015_64\lib\Qt5Guid.lib C:\Qt\Qt5.15.2\5.15.2\msvc2015_64\lib\Qt5Xmld.lib C:\Qt\Qt5.15.2\5.15.2\msvc2015_64\lib\Qt5Cored.lib   
+LIBS          = /LIBPATH:..\..\..\build_osgeo4w_3_28_9\debug /LIBPATH:..\..\..\depends\LASTools2019\lib64D ..\..\..\depends\LASTools2019\lib64D\laslib.lib ..\..\..\depends\CGAL-14.3_vs2014_x64\lib\CGAL-vc140-mt-gd-4.13.lib ..\..\..\depends\CGAL-14.3_vs2014_x64\lib\CGAL-vc140-mt-4.13.lib ..\..\..\depends\pcdviewer\PcdViewer_V1.4_src\x64\Debug\basic.lib ..\..\..\depends\pcdviewer\PcdViewer_V1.4_src\x64\Debug\geometry.lib ..\..\..\depends\pcdviewer\PcdViewer_V1.4_src\x64\Debug\math.lib ..\..\..\depends\pcdviewer\PcdViewer_V1.4_src\x64\Debug\qglviewer.lib ..\..\..\depends\pcdviewer\PcdViewer_V1.4_src\x64\Debug\widget.lib ..\..\..\build_osgeo4w_3_28_9\debug\libPointCloudDbManager.lib ..\..\..\build_osgeo4w_3_28_9\debug\libModelManagementTools.lib ..\..\..\build_osgeo4w_3_28_9\debug\libWidgets.lib /LIBPATH:E:\dev\OSGeo4Wltr_3_28_9\bin E:\dev\OSGeo4Wltr_3_28_9\lib\geos_c.lib E:\dev\OSGeo4Wltr_3_28_9\lib\proj.lib E:\dev\OSGeo4Wltr_3_28_9\lib\gdal_i.lib opengl32.lib glu32.lib C:\Qt\Qt5.15.2\5.15.2\msvc2015_64\lib\Qt5OpenGLd.lib C:\Qt\Qt5.15.2\5.15.2\msvc2015_64\lib\Qt5Widgetsd.lib C:\Qt\Qt5.15.2\5.15.2\msvc2015_64\lib\Qt5Guid.lib C:\Qt\Qt5.15.2\5.15.2\msvc2015_64\lib\Qt5Xmld.lib C:\Qt\Qt5.15.2\5.15.2\msvc2015_64\lib\Qt5Cored.lib   
 QMAKE         = C:\Qt\Qt5.15.2\5.15.2\msvc2015_64\bin\qmake.exe
 DEL_FILE      = del
 CHK_DIR_EXISTS= if not exist
@@ -93,9 +93,9 @@ DIST          =  libPCDViewer_global.h \
 		PCDViewerManager.cpp \
 		paint_canvas.cpp
 QMAKE_TARGET  = libPCDViewer
-DESTDIR        = ..\..\..\build_osgeo4w\debug\ #avoid trailing-slash linebreak
+DESTDIR        = ..\..\..\build_osgeo4w_3_28_9\debug\ #avoid trailing-slash linebreak
 TARGET         = libPCDViewer.dll
-DESTDIR_TARGET = ..\..\..\build_osgeo4w\debug\libPCDViewer.dll
+DESTDIR_TARGET = ..\..\..\build_osgeo4w_3_28_9\debug\libPCDViewer.dll
 
 ####### Implicit rules
 
@@ -116,16 +116,16 @@ DESTDIR_TARGET = ..\..\..\build_osgeo4w\debug\libPCDViewer.dll
 ####### Build rules
 
 first: all
-all: Makefile.Debug  ..\..\..\build_osgeo4w\debug\libPCDViewer.dll
+all: Makefile.Debug  ..\..\..\build_osgeo4w_3_28_9\debug\libPCDViewer.dll
 
-..\..\..\build_osgeo4w\debug\libPCDViewer.dll: C:\Qt\Qt5.15.2\5.15.2\msvc2015_64\lib\Qt5OpenGLd.lib C:\Qt\Qt5.15.2\5.15.2\msvc2015_64\lib\Qt5Widgetsd.lib C:\Qt\Qt5.15.2\5.15.2\msvc2015_64\lib\Qt5Guid.lib C:\Qt\Qt5.15.2\5.15.2\msvc2015_64\lib\Qt5Xmld.lib C:\Qt\Qt5.15.2\5.15.2\msvc2015_64\lib\Qt5Cored.lib ui_PCDViewerMainWindow.h $(OBJECTS) 
+..\..\..\build_osgeo4w_3_28_9\debug\libPCDViewer.dll: C:\Qt\Qt5.15.2\5.15.2\msvc2015_64\lib\Qt5OpenGLd.lib C:\Qt\Qt5.15.2\5.15.2\msvc2015_64\lib\Qt5Widgetsd.lib C:\Qt\Qt5.15.2\5.15.2\msvc2015_64\lib\Qt5Guid.lib C:\Qt\Qt5.15.2\5.15.2\msvc2015_64\lib\Qt5Xmld.lib C:\Qt\Qt5.15.2\5.15.2\msvc2015_64\lib\Qt5Cored.lib ui_PCDViewerMainWindow.h $(OBJECTS) 
 	$(LINKER) $(LFLAGS) /MANIFEST:embed /OUT:$(DESTDIR_TARGET) @<<
 debug\PCDViewerMainWindow.obj debug\select_tool.obj debug\select_vertex_lasso_tool.obj debug\select_vertex_rectangle_tool.obj debug\tool_manager3d.obj debug\tool3D.obj debug\PCDViewerManager.obj debug\paint_canvas.obj debug\qrc_PcdViewer.obj debug\moc_PCDViewerMainWindow.obj debug\moc_PCDViewerManager.obj debug\moc_paint_canvas.obj
 $(LIBS)
 <<
 
 qmake: FORCE
-	@$(QMAKE) -o Makefile.Debug libPCDViewer.pro -spec win32-msvc
+	@$(QMAKE) -o Makefile.Debug libPCDViewer.pro -spec win32-msvc "CONFIG+=debug"
 
 qmake_all: FORCE
 
@@ -134,10 +134,10 @@ dist:
 
 clean: compiler_clean 
 	-$(DEL_FILE) debug\PCDViewerMainWindow.obj debug\select_tool.obj debug\select_vertex_lasso_tool.obj debug\select_vertex_rectangle_tool.obj debug\tool_manager3d.obj debug\tool3D.obj debug\PCDViewerManager.obj debug\paint_canvas.obj debug\qrc_PcdViewer.obj debug\moc_PCDViewerMainWindow.obj debug\moc_PCDViewerManager.obj debug\moc_paint_canvas.obj
-	-$(DEL_FILE) ..\..\..\build_osgeo4w\debug\libPCDViewer.exp debug\libPCDViewer.vc.pdb ..\..\..\build_osgeo4w\debug\libPCDViewer.ilk ..\..\..\build_osgeo4w\debug\libPCDViewer.idb
+	-$(DEL_FILE) ..\..\..\build_osgeo4w_3_28_9\debug\libPCDViewer.exp debug\libPCDViewer.vc.pdb ..\..\..\build_osgeo4w_3_28_9\debug\libPCDViewer.ilk ..\..\..\build_osgeo4w_3_28_9\debug\libPCDViewer.idb
 
 distclean: clean 
-	-$(DEL_FILE) .qmake.stash ..\..\..\build_osgeo4w\debug\libPCDViewer.lib ..\..\..\build_osgeo4w\debug\libPCDViewer.pdb
+	-$(DEL_FILE) .qmake.stash ..\..\..\build_osgeo4w_3_28_9\debug\libPCDViewer.lib ..\..\..\build_osgeo4w_3_28_9\debug\libPCDViewer.pdb
 	-$(DEL_FILE) $(DESTDIR_TARGET)
 	-$(DEL_FILE) Makefile.Debug
 
@@ -1990,7 +1990,7 @@ debug\moc_PCDViewerMainWindow.cpp: PCDViewerMainWindow.h \
 		..\libWidgets\libwidgets_global.h \
 		debug\moc_predefs.h \
 		C:\Qt\Qt5.15.2\5.15.2\msvc2015_64\bin\moc.exe
-	C:\Qt\Qt5.15.2\5.15.2\msvc2015_64\bin\moc.exe $(DEFINES) --compiler-flavor=msvc --include E:/dev/src_osgeo4w/libs/libPCDViewer/debug/moc_predefs.h -IC:/Qt/Qt5.15.2/5.15.2/msvc2015_64/mkspecs/win32-msvc -IE:/dev/src_osgeo4w/libs/libPCDViewer -IE:/dev/src_osgeo4w/libs/libPCDViewer -IE:/dev/OSGeo4Wltr/include -IE:/dev/depends/LASTools2019/LASlib/inc -IE:/dev/depends/LASTools2019/LASzip/src -IE:/dev/src_osgeo4w/libs/libCRS -IE:/dev/src_osgeo4w/libs/libParameters -IE:/dev/src_osgeo4w/libs -IE:/dev/src_osgeo4w/libs/libIGDAL -IE:/dev/src_osgeo4w/libs/libPointCloudDbManager -IE:/dev/src_osgeo4w/libs/libModelManagementTools -IE:/dev/src_osgeo4w/libs/libWidgets -IE:/dev/depends/pcdviewer/PcdViewer_V1.4_src -IE:/dev/depends/pcdviewer/PcdViewer_V1.4_src/pcdviewer -IE:/dev/depends/eigen-eigen-323c052e1731 -IE:/dev/src_osgeo4w/libs/libPCDViewer -IE:/dev/depends/pcdviewer/PcdViewer_V1.4_src/basic -IE:/dev/depends/pcdviewer/PcdViewer_V1.4_src/geometry -IE:/dev/depends/pcdviewer/PcdViewer_V1.4_src/math -IE:/dev/depends/pcdviewer/PcdViewer_V1.4_src/QGLViewer -IE:/dev/depends/pcdviewer/PcdViewer_V1.4_src/widget -IE:/dev/depends/CGAL-14.3_vs2014_x64/include -IE:/dev/depends/boost_1_68_0_vs2014_x64 -IC:/Qt/Qt5.15.2/5.15.2/msvc2015_64/include -IC:/Qt/Qt5.15.2/5.15.2/msvc2015_64/include/QtOpenGL -IC:/Qt/Qt5.15.2/5.15.2/msvc2015_64/include/QtWidgets -IC:/Qt/Qt5.15.2/5.15.2/msvc2015_64/include/QtGui -IC:/Qt/Qt5.15.2/5.15.2/msvc2015_64/include/QtANGLE -IC:/Qt/Qt5.15.2/5.15.2/msvc2015_64/include/QtXml -IC:/Qt/Qt5.15.2/5.15.2/msvc2015_64/include/QtCore -I"C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\INCLUDE" -I"C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\ATLMFC\INCLUDE" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.10240.0\ucrt" -I"C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\include\um" -I"C:\Program Files (x86)\Windows Kits\8.1\include\\shared" -I"C:\Program Files (x86)\Windows Kits\8.1\include\\um" -I"C:\Program Files (x86)\Windows Kits\8.1\include\\winrt" PCDViewerMainWindow.h -o debug\moc_PCDViewerMainWindow.cpp
+	C:\Qt\Qt5.15.2\5.15.2\msvc2015_64\bin\moc.exe $(DEFINES) --compiler-flavor=msvc --include E:/dev/src_osgeo4w_3_28_9/libs/libPCDViewer/debug/moc_predefs.h -IC:/Qt/Qt5.15.2/5.15.2/msvc2015_64/mkspecs/win32-msvc -IE:/dev/src_osgeo4w_3_28_9/libs/libPCDViewer -IE:/dev/src_osgeo4w_3_28_9/libs/libPCDViewer -IE:/dev/OSGeo4Wltr_3_28_9/include -IE:/dev/depends/LASTools2019/LASlib/inc -IE:/dev/depends/LASTools2019/LASzip/src -IE:/dev/src_osgeo4w_3_28_9/libs/libCRS -IE:/dev/src_osgeo4w_3_28_9/libs/libParameters -IE:/dev/src_osgeo4w_3_28_9/libs -IE:/dev/src_osgeo4w_3_28_9/libs/libIGDAL -IE:/dev/src_osgeo4w_3_28_9/libs/libPointCloudDbManager -IE:/dev/src_osgeo4w_3_28_9/libs/libModelManagementTools -IE:/dev/src_osgeo4w_3_28_9/libs/libWidgets -IE:/dev/depends/pcdviewer/PcdViewer_V1.4_src -IE:/dev/depends/pcdviewer/PcdViewer_V1.4_src/pcdviewer -IE:/dev/depends/eigen-eigen-323c052e1731 -IE:/dev/src_osgeo4w_3_28_9/libs/libPCDViewer -IE:/dev/depends/pcdviewer/PcdViewer_V1.4_src/basic -IE:/dev/depends/pcdviewer/PcdViewer_V1.4_src/geometry -IE:/dev/depends/pcdviewer/PcdViewer_V1.4_src/math -IE:/dev/depends/pcdviewer/PcdViewer_V1.4_src/QGLViewer -IE:/dev/depends/pcdviewer/PcdViewer_V1.4_src/widget -IE:/dev/depends/CGAL-14.3_vs2014_x64/include -IE:/dev/depends/boost_1_68_0_vs2014_x64 -IC:/Qt/Qt5.15.2/5.15.2/msvc2015_64/include -IC:/Qt/Qt5.15.2/5.15.2/msvc2015_64/include/QtOpenGL -IC:/Qt/Qt5.15.2/5.15.2/msvc2015_64/include/QtWidgets -IC:/Qt/Qt5.15.2/5.15.2/msvc2015_64/include/QtGui -IC:/Qt/Qt5.15.2/5.15.2/msvc2015_64/include/QtANGLE -IC:/Qt/Qt5.15.2/5.15.2/msvc2015_64/include/QtXml -IC:/Qt/Qt5.15.2/5.15.2/msvc2015_64/include/QtCore -I"C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\INCLUDE" -I"C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\ATLMFC\INCLUDE" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.10240.0\ucrt" -I"C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\include\um" -I"C:\Program Files (x86)\Windows Kits\8.1\include\\shared" -I"C:\Program Files (x86)\Windows Kits\8.1\include\\um" -I"C:\Program Files (x86)\Windows Kits\8.1\include\\winrt" PCDViewerMainWindow.h -o debug\moc_PCDViewerMainWindow.cpp
 
 debug\moc_PCDViewerManager.cpp: PCDViewerManager.h \
 		C:\Qt\Qt5.15.2\5.15.2\msvc2015_64\include\QtWidgets\QWidget \
@@ -2104,40 +2104,40 @@ debug\moc_PCDViewerManager.cpp: PCDViewerManager.h \
 		C:\Qt\Qt5.15.2\5.15.2\msvc2015_64\include\QtCore\QDateTime \
 		C:\Qt\Qt5.15.2\5.15.2\msvc2015_64\include\QtCore\qdatetime.h \
 		..\libModelManagementTools\libModelManagementTools_global.h \
-		..\..\..\OSGeo4Wltr\include\cpl_conv.h \
-		..\..\..\OSGeo4Wltr\include\cpl_port.h \
-		..\..\..\OSGeo4Wltr\include\cpl_config.h \
-		..\..\..\OSGeo4Wltr\include\cpl_vsi.h \
-		..\..\..\OSGeo4Wltr\include\cpl_progress.h \
-		..\..\..\OSGeo4Wltr\include\cpl_error.h \
+		..\..\..\OSGeo4Wltr_3_28_9\include\cpl_conv.h \
+		..\..\..\OSGeo4Wltr_3_28_9\include\cpl_port.h \
+		..\..\..\OSGeo4Wltr_3_28_9\include\cpl_config.h \
+		..\..\..\OSGeo4Wltr_3_28_9\include\cpl_vsi.h \
+		..\..\..\OSGeo4Wltr_3_28_9\include\cpl_progress.h \
+		..\..\..\OSGeo4Wltr_3_28_9\include\cpl_error.h \
 		..\libPointCloudDbManager\PointCloudDbManager.h \
 		C:\Qt\Qt5.15.2\5.15.2\msvc2015_64\include\QtCore\QMutex \
 		..\libPointCloudDbManager\PointCloudDbDefinitions.h \
 		..\libIGDAL\SpatiaLite.h \
 		C:\Qt\Qt5.15.2\5.15.2\msvc2015_64\include\QtCore\QStringList \
 		..\libIGDAL\libIGDAL_global.h \
-		..\..\..\OSGeo4Wltr\include\ogrsf_frmts.h \
-		..\..\..\OSGeo4Wltr\include\ogr_feature.h \
-		..\..\..\OSGeo4Wltr\include\cpl_atomic_ops.h \
-		..\..\..\OSGeo4Wltr\include\ogr_featurestyle.h \
-		..\..\..\OSGeo4Wltr\include\cpl_string.h \
-		..\..\..\OSGeo4Wltr\include\ogr_core.h \
-		..\..\..\OSGeo4Wltr\include\gdal_version.h \
-		..\..\..\OSGeo4Wltr\include\ogr_geometry.h \
-		..\..\..\OSGeo4Wltr\include\cpl_json.h \
-		..\..\..\OSGeo4Wltr\include\ogr_spatialref.h \
-		..\..\..\OSGeo4Wltr\include\ogr_srs_api.h \
-		..\..\..\OSGeo4Wltr\include\gdal_priv.h \
-		..\..\..\OSGeo4Wltr\include\gdal.h \
-		..\..\..\OSGeo4Wltr\include\cpl_virtualmem.h \
-		..\..\..\OSGeo4Wltr\include\cpl_minixml.h \
-		..\..\..\OSGeo4Wltr\include\ogr_api.h \
-		..\..\..\OSGeo4Wltr\include\gdal_frmts.h \
-		..\..\..\OSGeo4Wltr\include\cpl_multiproc.h \
+		..\..\..\OSGeo4Wltr_3_28_9\include\ogrsf_frmts.h \
+		..\..\..\OSGeo4Wltr_3_28_9\include\ogr_feature.h \
+		..\..\..\OSGeo4Wltr_3_28_9\include\cpl_atomic_ops.h \
+		..\..\..\OSGeo4Wltr_3_28_9\include\ogr_featurestyle.h \
+		..\..\..\OSGeo4Wltr_3_28_9\include\cpl_string.h \
+		..\..\..\OSGeo4Wltr_3_28_9\include\ogr_core.h \
+		..\..\..\OSGeo4Wltr_3_28_9\include\gdal_version.h \
+		..\..\..\OSGeo4Wltr_3_28_9\include\ogr_geometry.h \
+		..\..\..\OSGeo4Wltr_3_28_9\include\cpl_json.h \
+		..\..\..\OSGeo4Wltr_3_28_9\include\ogr_spatialref.h \
+		..\..\..\OSGeo4Wltr_3_28_9\include\ogr_srs_api.h \
+		..\..\..\OSGeo4Wltr_3_28_9\include\gdal_priv.h \
+		..\..\..\OSGeo4Wltr_3_28_9\include\gdal.h \
+		..\..\..\OSGeo4Wltr_3_28_9\include\cpl_virtualmem.h \
+		..\..\..\OSGeo4Wltr_3_28_9\include\cpl_minixml.h \
+		..\..\..\OSGeo4Wltr_3_28_9\include\ogr_api.h \
+		..\..\..\OSGeo4Wltr_3_28_9\include\gdal_frmts.h \
+		..\..\..\OSGeo4Wltr_3_28_9\include\cpl_multiproc.h \
 		..\libPointCloudDbManager\libpointclouddbmanager_global.h \
 		..\libPointCloudDbManager\PointCloudSpatialiteDb.h \
 		C:\Qt\Qt5.15.2\5.15.2\msvc2015_64\include\QtCore\QString \
-		..\..\..\OSGeo4Wltr\include\gdal_utils.h \
+		..\..\..\OSGeo4Wltr_3_28_9\include\gdal_utils.h \
 		libPCDViewer_global.h \
 		PCDViewerMainWindow.h \
 		C:\Qt\Qt5.15.2\5.15.2\msvc2015_64\include\QtWidgets\QMainWindow \
@@ -3827,7 +3827,7 @@ debug\moc_PCDViewerManager.cpp: PCDViewerManager.h \
 		..\libWidgets\libwidgets_global.h \
 		debug\moc_predefs.h \
 		C:\Qt\Qt5.15.2\5.15.2\msvc2015_64\bin\moc.exe
-	C:\Qt\Qt5.15.2\5.15.2\msvc2015_64\bin\moc.exe $(DEFINES) --compiler-flavor=msvc --include E:/dev/src_osgeo4w/libs/libPCDViewer/debug/moc_predefs.h -IC:/Qt/Qt5.15.2/5.15.2/msvc2015_64/mkspecs/win32-msvc -IE:/dev/src_osgeo4w/libs/libPCDViewer -IE:/dev/src_osgeo4w/libs/libPCDViewer -IE:/dev/OSGeo4Wltr/include -IE:/dev/depends/LASTools2019/LASlib/inc -IE:/dev/depends/LASTools2019/LASzip/src -IE:/dev/src_osgeo4w/libs/libCRS -IE:/dev/src_osgeo4w/libs/libParameters -IE:/dev/src_osgeo4w/libs -IE:/dev/src_osgeo4w/libs/libIGDAL -IE:/dev/src_osgeo4w/libs/libPointCloudDbManager -IE:/dev/src_osgeo4w/libs/libModelManagementTools -IE:/dev/src_osgeo4w/libs/libWidgets -IE:/dev/depends/pcdviewer/PcdViewer_V1.4_src -IE:/dev/depends/pcdviewer/PcdViewer_V1.4_src/pcdviewer -IE:/dev/depends/eigen-eigen-323c052e1731 -IE:/dev/src_osgeo4w/libs/libPCDViewer -IE:/dev/depends/pcdviewer/PcdViewer_V1.4_src/basic -IE:/dev/depends/pcdviewer/PcdViewer_V1.4_src/geometry -IE:/dev/depends/pcdviewer/PcdViewer_V1.4_src/math -IE:/dev/depends/pcdviewer/PcdViewer_V1.4_src/QGLViewer -IE:/dev/depends/pcdviewer/PcdViewer_V1.4_src/widget -IE:/dev/depends/CGAL-14.3_vs2014_x64/include -IE:/dev/depends/boost_1_68_0_vs2014_x64 -IC:/Qt/Qt5.15.2/5.15.2/msvc2015_64/include -IC:/Qt/Qt5.15.2/5.15.2/msvc2015_64/include/QtOpenGL -IC:/Qt/Qt5.15.2/5.15.2/msvc2015_64/include/QtWidgets -IC:/Qt/Qt5.15.2/5.15.2/msvc2015_64/include/QtGui -IC:/Qt/Qt5.15.2/5.15.2/msvc2015_64/include/QtANGLE -IC:/Qt/Qt5.15.2/5.15.2/msvc2015_64/include/QtXml -IC:/Qt/Qt5.15.2/5.15.2/msvc2015_64/include/QtCore -I"C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\INCLUDE" -I"C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\ATLMFC\INCLUDE" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.10240.0\ucrt" -I"C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\include\um" -I"C:\Program Files (x86)\Windows Kits\8.1\include\\shared" -I"C:\Program Files (x86)\Windows Kits\8.1\include\\um" -I"C:\Program Files (x86)\Windows Kits\8.1\include\\winrt" PCDViewerManager.h -o debug\moc_PCDViewerManager.cpp
+	C:\Qt\Qt5.15.2\5.15.2\msvc2015_64\bin\moc.exe $(DEFINES) --compiler-flavor=msvc --include E:/dev/src_osgeo4w_3_28_9/libs/libPCDViewer/debug/moc_predefs.h -IC:/Qt/Qt5.15.2/5.15.2/msvc2015_64/mkspecs/win32-msvc -IE:/dev/src_osgeo4w_3_28_9/libs/libPCDViewer -IE:/dev/src_osgeo4w_3_28_9/libs/libPCDViewer -IE:/dev/OSGeo4Wltr_3_28_9/include -IE:/dev/depends/LASTools2019/LASlib/inc -IE:/dev/depends/LASTools2019/LASzip/src -IE:/dev/src_osgeo4w_3_28_9/libs/libCRS -IE:/dev/src_osgeo4w_3_28_9/libs/libParameters -IE:/dev/src_osgeo4w_3_28_9/libs -IE:/dev/src_osgeo4w_3_28_9/libs/libIGDAL -IE:/dev/src_osgeo4w_3_28_9/libs/libPointCloudDbManager -IE:/dev/src_osgeo4w_3_28_9/libs/libModelManagementTools -IE:/dev/src_osgeo4w_3_28_9/libs/libWidgets -IE:/dev/depends/pcdviewer/PcdViewer_V1.4_src -IE:/dev/depends/pcdviewer/PcdViewer_V1.4_src/pcdviewer -IE:/dev/depends/eigen-eigen-323c052e1731 -IE:/dev/src_osgeo4w_3_28_9/libs/libPCDViewer -IE:/dev/depends/pcdviewer/PcdViewer_V1.4_src/basic -IE:/dev/depends/pcdviewer/PcdViewer_V1.4_src/geometry -IE:/dev/depends/pcdviewer/PcdViewer_V1.4_src/math -IE:/dev/depends/pcdviewer/PcdViewer_V1.4_src/QGLViewer -IE:/dev/depends/pcdviewer/PcdViewer_V1.4_src/widget -IE:/dev/depends/CGAL-14.3_vs2014_x64/include -IE:/dev/depends/boost_1_68_0_vs2014_x64 -IC:/Qt/Qt5.15.2/5.15.2/msvc2015_64/include -IC:/Qt/Qt5.15.2/5.15.2/msvc2015_64/include/QtOpenGL -IC:/Qt/Qt5.15.2/5.15.2/msvc2015_64/include/QtWidgets -IC:/Qt/Qt5.15.2/5.15.2/msvc2015_64/include/QtGui -IC:/Qt/Qt5.15.2/5.15.2/msvc2015_64/include/QtANGLE -IC:/Qt/Qt5.15.2/5.15.2/msvc2015_64/include/QtXml -IC:/Qt/Qt5.15.2/5.15.2/msvc2015_64/include/QtCore -I"C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\INCLUDE" -I"C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\ATLMFC\INCLUDE" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.10240.0\ucrt" -I"C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\include\um" -I"C:\Program Files (x86)\Windows Kits\8.1\include\\shared" -I"C:\Program Files (x86)\Windows Kits\8.1\include\\um" -I"C:\Program Files (x86)\Windows Kits\8.1\include\\winrt" PCDViewerManager.h -o debug\moc_PCDViewerManager.cpp
 
 debug\moc_paint_canvas.cpp: paint_canvas.h \
 		..\..\..\depends\pcdviewer\PcdViewer_V1.4_src\qglviewer\qglviewer.h \
@@ -5624,7 +5624,7 @@ debug\moc_paint_canvas.cpp: paint_canvas.h \
 		..\..\..\depends\pcdviewer\PcdViewer_V1.4_src\geometry\selectable_item.h \
 		debug\moc_predefs.h \
 		C:\Qt\Qt5.15.2\5.15.2\msvc2015_64\bin\moc.exe
-	C:\Qt\Qt5.15.2\5.15.2\msvc2015_64\bin\moc.exe $(DEFINES) --compiler-flavor=msvc --include E:/dev/src_osgeo4w/libs/libPCDViewer/debug/moc_predefs.h -IC:/Qt/Qt5.15.2/5.15.2/msvc2015_64/mkspecs/win32-msvc -IE:/dev/src_osgeo4w/libs/libPCDViewer -IE:/dev/src_osgeo4w/libs/libPCDViewer -IE:/dev/OSGeo4Wltr/include -IE:/dev/depends/LASTools2019/LASlib/inc -IE:/dev/depends/LASTools2019/LASzip/src -IE:/dev/src_osgeo4w/libs/libCRS -IE:/dev/src_osgeo4w/libs/libParameters -IE:/dev/src_osgeo4w/libs -IE:/dev/src_osgeo4w/libs/libIGDAL -IE:/dev/src_osgeo4w/libs/libPointCloudDbManager -IE:/dev/src_osgeo4w/libs/libModelManagementTools -IE:/dev/src_osgeo4w/libs/libWidgets -IE:/dev/depends/pcdviewer/PcdViewer_V1.4_src -IE:/dev/depends/pcdviewer/PcdViewer_V1.4_src/pcdviewer -IE:/dev/depends/eigen-eigen-323c052e1731 -IE:/dev/src_osgeo4w/libs/libPCDViewer -IE:/dev/depends/pcdviewer/PcdViewer_V1.4_src/basic -IE:/dev/depends/pcdviewer/PcdViewer_V1.4_src/geometry -IE:/dev/depends/pcdviewer/PcdViewer_V1.4_src/math -IE:/dev/depends/pcdviewer/PcdViewer_V1.4_src/QGLViewer -IE:/dev/depends/pcdviewer/PcdViewer_V1.4_src/widget -IE:/dev/depends/CGAL-14.3_vs2014_x64/include -IE:/dev/depends/boost_1_68_0_vs2014_x64 -IC:/Qt/Qt5.15.2/5.15.2/msvc2015_64/include -IC:/Qt/Qt5.15.2/5.15.2/msvc2015_64/include/QtOpenGL -IC:/Qt/Qt5.15.2/5.15.2/msvc2015_64/include/QtWidgets -IC:/Qt/Qt5.15.2/5.15.2/msvc2015_64/include/QtGui -IC:/Qt/Qt5.15.2/5.15.2/msvc2015_64/include/QtANGLE -IC:/Qt/Qt5.15.2/5.15.2/msvc2015_64/include/QtXml -IC:/Qt/Qt5.15.2/5.15.2/msvc2015_64/include/QtCore -I"C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\INCLUDE" -I"C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\ATLMFC\INCLUDE" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.10240.0\ucrt" -I"C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\include\um" -I"C:\Program Files (x86)\Windows Kits\8.1\include\\shared" -I"C:\Program Files (x86)\Windows Kits\8.1\include\\um" -I"C:\Program Files (x86)\Windows Kits\8.1\include\\winrt" paint_canvas.h -o debug\moc_paint_canvas.cpp
+	C:\Qt\Qt5.15.2\5.15.2\msvc2015_64\bin\moc.exe $(DEFINES) --compiler-flavor=msvc --include E:/dev/src_osgeo4w_3_28_9/libs/libPCDViewer/debug/moc_predefs.h -IC:/Qt/Qt5.15.2/5.15.2/msvc2015_64/mkspecs/win32-msvc -IE:/dev/src_osgeo4w_3_28_9/libs/libPCDViewer -IE:/dev/src_osgeo4w_3_28_9/libs/libPCDViewer -IE:/dev/OSGeo4Wltr_3_28_9/include -IE:/dev/depends/LASTools2019/LASlib/inc -IE:/dev/depends/LASTools2019/LASzip/src -IE:/dev/src_osgeo4w_3_28_9/libs/libCRS -IE:/dev/src_osgeo4w_3_28_9/libs/libParameters -IE:/dev/src_osgeo4w_3_28_9/libs -IE:/dev/src_osgeo4w_3_28_9/libs/libIGDAL -IE:/dev/src_osgeo4w_3_28_9/libs/libPointCloudDbManager -IE:/dev/src_osgeo4w_3_28_9/libs/libModelManagementTools -IE:/dev/src_osgeo4w_3_28_9/libs/libWidgets -IE:/dev/depends/pcdviewer/PcdViewer_V1.4_src -IE:/dev/depends/pcdviewer/PcdViewer_V1.4_src/pcdviewer -IE:/dev/depends/eigen-eigen-323c052e1731 -IE:/dev/src_osgeo4w_3_28_9/libs/libPCDViewer -IE:/dev/depends/pcdviewer/PcdViewer_V1.4_src/basic -IE:/dev/depends/pcdviewer/PcdViewer_V1.4_src/geometry -IE:/dev/depends/pcdviewer/PcdViewer_V1.4_src/math -IE:/dev/depends/pcdviewer/PcdViewer_V1.4_src/QGLViewer -IE:/dev/depends/pcdviewer/PcdViewer_V1.4_src/widget -IE:/dev/depends/CGAL-14.3_vs2014_x64/include -IE:/dev/depends/boost_1_68_0_vs2014_x64 -IC:/Qt/Qt5.15.2/5.15.2/msvc2015_64/include -IC:/Qt/Qt5.15.2/5.15.2/msvc2015_64/include/QtOpenGL -IC:/Qt/Qt5.15.2/5.15.2/msvc2015_64/include/QtWidgets -IC:/Qt/Qt5.15.2/5.15.2/msvc2015_64/include/QtGui -IC:/Qt/Qt5.15.2/5.15.2/msvc2015_64/include/QtANGLE -IC:/Qt/Qt5.15.2/5.15.2/msvc2015_64/include/QtXml -IC:/Qt/Qt5.15.2/5.15.2/msvc2015_64/include/QtCore -I"C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\INCLUDE" -I"C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\ATLMFC\INCLUDE" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.10240.0\ucrt" -I"C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\include\um" -I"C:\Program Files (x86)\Windows Kits\8.1\include\\shared" -I"C:\Program Files (x86)\Windows Kits\8.1\include\\um" -I"C:\Program Files (x86)\Windows Kits\8.1\include\\winrt" paint_canvas.h -o debug\moc_paint_canvas.cpp
 
 compiler_moc_objc_header_make_all:
 compiler_moc_objc_header_clean:
@@ -7524,39 +7524,39 @@ debug\PCDViewerMainWindow.obj: PCDViewerMainWindow.cpp C:\Qt\Qt5.15.2\5.15.2\msv
 		C:\Qt\Qt5.15.2\5.15.2\msvc2015_64\include\QtCore\QTextStream \
 		C:\Qt\Qt5.15.2\5.15.2\msvc2015_64\include\QtCore\QDateTime \
 		..\libModelManagementTools\libModelManagementTools_global.h \
-		..\..\..\OSGeo4Wltr\include\cpl_conv.h \
-		..\..\..\OSGeo4Wltr\include\cpl_port.h \
-		..\..\..\OSGeo4Wltr\include\cpl_config.h \
-		..\..\..\OSGeo4Wltr\include\cpl_vsi.h \
-		..\..\..\OSGeo4Wltr\include\cpl_progress.h \
-		..\..\..\OSGeo4Wltr\include\cpl_error.h \
+		..\..\..\OSGeo4Wltr_3_28_9\include\cpl_conv.h \
+		..\..\..\OSGeo4Wltr_3_28_9\include\cpl_port.h \
+		..\..\..\OSGeo4Wltr_3_28_9\include\cpl_config.h \
+		..\..\..\OSGeo4Wltr_3_28_9\include\cpl_vsi.h \
+		..\..\..\OSGeo4Wltr_3_28_9\include\cpl_progress.h \
+		..\..\..\OSGeo4Wltr_3_28_9\include\cpl_error.h \
 		..\libPointCloudDbManager\PointCloudDbManager.h \
 		C:\Qt\Qt5.15.2\5.15.2\msvc2015_64\include\QtCore\QMutex \
 		..\libPointCloudDbManager\PointCloudDbDefinitions.h \
 		..\libIGDAL\SpatiaLite.h \
 		C:\Qt\Qt5.15.2\5.15.2\msvc2015_64\include\QtCore\QStringList \
 		..\libIGDAL\libIGDAL_global.h \
-		..\..\..\OSGeo4Wltr\include\ogrsf_frmts.h \
-		..\..\..\OSGeo4Wltr\include\ogr_feature.h \
-		..\..\..\OSGeo4Wltr\include\cpl_atomic_ops.h \
-		..\..\..\OSGeo4Wltr\include\ogr_featurestyle.h \
-		..\..\..\OSGeo4Wltr\include\cpl_string.h \
-		..\..\..\OSGeo4Wltr\include\ogr_core.h \
-		..\..\..\OSGeo4Wltr\include\gdal_version.h \
-		..\..\..\OSGeo4Wltr\include\ogr_geometry.h \
-		..\..\..\OSGeo4Wltr\include\cpl_json.h \
-		..\..\..\OSGeo4Wltr\include\ogr_spatialref.h \
-		..\..\..\OSGeo4Wltr\include\ogr_srs_api.h \
-		..\..\..\OSGeo4Wltr\include\gdal_priv.h \
-		..\..\..\OSGeo4Wltr\include\gdal.h \
-		..\..\..\OSGeo4Wltr\include\cpl_virtualmem.h \
-		..\..\..\OSGeo4Wltr\include\cpl_minixml.h \
-		..\..\..\OSGeo4Wltr\include\ogr_api.h \
-		..\..\..\OSGeo4Wltr\include\gdal_frmts.h \
-		..\..\..\OSGeo4Wltr\include\cpl_multiproc.h \
+		..\..\..\OSGeo4Wltr_3_28_9\include\ogrsf_frmts.h \
+		..\..\..\OSGeo4Wltr_3_28_9\include\ogr_feature.h \
+		..\..\..\OSGeo4Wltr_3_28_9\include\cpl_atomic_ops.h \
+		..\..\..\OSGeo4Wltr_3_28_9\include\ogr_featurestyle.h \
+		..\..\..\OSGeo4Wltr_3_28_9\include\cpl_string.h \
+		..\..\..\OSGeo4Wltr_3_28_9\include\ogr_core.h \
+		..\..\..\OSGeo4Wltr_3_28_9\include\gdal_version.h \
+		..\..\..\OSGeo4Wltr_3_28_9\include\ogr_geometry.h \
+		..\..\..\OSGeo4Wltr_3_28_9\include\cpl_json.h \
+		..\..\..\OSGeo4Wltr_3_28_9\include\ogr_spatialref.h \
+		..\..\..\OSGeo4Wltr_3_28_9\include\ogr_srs_api.h \
+		..\..\..\OSGeo4Wltr_3_28_9\include\gdal_priv.h \
+		..\..\..\OSGeo4Wltr_3_28_9\include\gdal.h \
+		..\..\..\OSGeo4Wltr_3_28_9\include\cpl_virtualmem.h \
+		..\..\..\OSGeo4Wltr_3_28_9\include\cpl_minixml.h \
+		..\..\..\OSGeo4Wltr_3_28_9\include\ogr_api.h \
+		..\..\..\OSGeo4Wltr_3_28_9\include\gdal_frmts.h \
+		..\..\..\OSGeo4Wltr_3_28_9\include\cpl_multiproc.h \
 		..\libPointCloudDbManager\libpointclouddbmanager_global.h \
 		..\libPointCloudDbManager\PointCloudSpatialiteDb.h \
-		..\..\..\OSGeo4Wltr\include\gdal_utils.h \
+		..\..\..\OSGeo4Wltr_3_28_9\include\gdal_utils.h \
 		..\libModelManagementTools\ModelDbManagerDefinitions.h \
 		..\libModelManagementTools\ModelObject.h \
 		..\libModelManagementTools\ModelObjectClass.h \
@@ -16872,40 +16872,40 @@ debug\PCDViewerManager.obj: PCDViewerManager.cpp C:\Qt\Qt5.15.2\5.15.2\msvc2015_
 		C:\Qt\Qt5.15.2\5.15.2\msvc2015_64\include\QtCore\QDateTime \
 		C:\Qt\Qt5.15.2\5.15.2\msvc2015_64\include\QtCore\qdatetime.h \
 		..\libModelManagementTools\libModelManagementTools_global.h \
-		..\..\..\OSGeo4Wltr\include\cpl_conv.h \
-		..\..\..\OSGeo4Wltr\include\cpl_port.h \
-		..\..\..\OSGeo4Wltr\include\cpl_config.h \
-		..\..\..\OSGeo4Wltr\include\cpl_vsi.h \
-		..\..\..\OSGeo4Wltr\include\cpl_progress.h \
-		..\..\..\OSGeo4Wltr\include\cpl_error.h \
+		..\..\..\OSGeo4Wltr_3_28_9\include\cpl_conv.h \
+		..\..\..\OSGeo4Wltr_3_28_9\include\cpl_port.h \
+		..\..\..\OSGeo4Wltr_3_28_9\include\cpl_config.h \
+		..\..\..\OSGeo4Wltr_3_28_9\include\cpl_vsi.h \
+		..\..\..\OSGeo4Wltr_3_28_9\include\cpl_progress.h \
+		..\..\..\OSGeo4Wltr_3_28_9\include\cpl_error.h \
 		..\libPointCloudDbManager\PointCloudDbManager.h \
 		C:\Qt\Qt5.15.2\5.15.2\msvc2015_64\include\QtCore\QMutex \
 		..\libPointCloudDbManager\PointCloudDbDefinitions.h \
 		..\libIGDAL\SpatiaLite.h \
 		C:\Qt\Qt5.15.2\5.15.2\msvc2015_64\include\QtCore\QStringList \
 		..\libIGDAL\libIGDAL_global.h \
-		..\..\..\OSGeo4Wltr\include\ogrsf_frmts.h \
-		..\..\..\OSGeo4Wltr\include\ogr_feature.h \
-		..\..\..\OSGeo4Wltr\include\cpl_atomic_ops.h \
-		..\..\..\OSGeo4Wltr\include\ogr_featurestyle.h \
-		..\..\..\OSGeo4Wltr\include\cpl_string.h \
-		..\..\..\OSGeo4Wltr\include\ogr_core.h \
-		..\..\..\OSGeo4Wltr\include\gdal_version.h \
-		..\..\..\OSGeo4Wltr\include\ogr_geometry.h \
-		..\..\..\OSGeo4Wltr\include\cpl_json.h \
-		..\..\..\OSGeo4Wltr\include\ogr_spatialref.h \
-		..\..\..\OSGeo4Wltr\include\ogr_srs_api.h \
-		..\..\..\OSGeo4Wltr\include\gdal_priv.h \
-		..\..\..\OSGeo4Wltr\include\gdal.h \
-		..\..\..\OSGeo4Wltr\include\cpl_virtualmem.h \
-		..\..\..\OSGeo4Wltr\include\cpl_minixml.h \
-		..\..\..\OSGeo4Wltr\include\ogr_api.h \
-		..\..\..\OSGeo4Wltr\include\gdal_frmts.h \
-		..\..\..\OSGeo4Wltr\include\cpl_multiproc.h \
+		..\..\..\OSGeo4Wltr_3_28_9\include\ogrsf_frmts.h \
+		..\..\..\OSGeo4Wltr_3_28_9\include\ogr_feature.h \
+		..\..\..\OSGeo4Wltr_3_28_9\include\cpl_atomic_ops.h \
+		..\..\..\OSGeo4Wltr_3_28_9\include\ogr_featurestyle.h \
+		..\..\..\OSGeo4Wltr_3_28_9\include\cpl_string.h \
+		..\..\..\OSGeo4Wltr_3_28_9\include\ogr_core.h \
+		..\..\..\OSGeo4Wltr_3_28_9\include\gdal_version.h \
+		..\..\..\OSGeo4Wltr_3_28_9\include\ogr_geometry.h \
+		..\..\..\OSGeo4Wltr_3_28_9\include\cpl_json.h \
+		..\..\..\OSGeo4Wltr_3_28_9\include\ogr_spatialref.h \
+		..\..\..\OSGeo4Wltr_3_28_9\include\ogr_srs_api.h \
+		..\..\..\OSGeo4Wltr_3_28_9\include\gdal_priv.h \
+		..\..\..\OSGeo4Wltr_3_28_9\include\gdal.h \
+		..\..\..\OSGeo4Wltr_3_28_9\include\cpl_virtualmem.h \
+		..\..\..\OSGeo4Wltr_3_28_9\include\cpl_minixml.h \
+		..\..\..\OSGeo4Wltr_3_28_9\include\ogr_api.h \
+		..\..\..\OSGeo4Wltr_3_28_9\include\gdal_frmts.h \
+		..\..\..\OSGeo4Wltr_3_28_9\include\cpl_multiproc.h \
 		..\libPointCloudDbManager\libpointclouddbmanager_global.h \
 		..\libPointCloudDbManager\PointCloudSpatialiteDb.h \
 		C:\Qt\Qt5.15.2\5.15.2\msvc2015_64\include\QtCore\QString \
-		..\..\..\OSGeo4Wltr\include\gdal_utils.h \
+		..\..\..\OSGeo4Wltr_3_28_9\include\gdal_utils.h \
 		libPCDViewer_global.h \
 		PCDViewerMainWindow.h \
 		C:\Qt\Qt5.15.2\5.15.2\msvc2015_64\include\QtWidgets\QMainWindow \
